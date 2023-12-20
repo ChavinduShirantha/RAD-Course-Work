@@ -21,24 +21,22 @@ export class Navbar extends Component {
                         <Link to="/">Home</Link>
                     </li>
                     <li className="mr-2 text-[11px] text-[#e6f0e6] hover:text-green-400">
-                        <Link to="/contact">Contact</Link>
+                        <Link to="/customer">Customers</Link>
                     </li>
                     <li className="mr-2 text-[11px] text-[#e6f0e6] hover:text-green-400">
-                        <Link to="/about">About</Link>
+                        <Link to="/item">Items</Link>
+                    </li>
+                    <li className="mr-2 text-[11px] text-[#e6f0e6] hover:text-green-400">
+                        <Link to="/placeorder">Place Orders</Link>
                     </li>
                 </ul>
 
                 <button className="text-[8px] text-[#e6f0e6]
                                    bg-green-400 pl-3 pr-3
-                                   hover:text-tertiary"
-                        onClick={this.onButtonClick}>
-                    Sign In
+                                   hover:text-tertiary">Sign In
                 </button>
             </div>
         );
     }
 
-    private onButtonClick = () => {
-        alert("Button Clicked!")
-    }
 }
