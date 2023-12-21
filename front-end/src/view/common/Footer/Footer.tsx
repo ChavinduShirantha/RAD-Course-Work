@@ -1,5 +1,5 @@
 import {Component} from "react";
-import logo from '../../../images/icon.png'
+import logo from '../../../images/logo.png'
 import {Link} from "react-router-dom";
 
 export class Footer extends Component {
@@ -9,14 +9,12 @@ export class Footer extends Component {
                             justify-center">
 
                 <p className="text-[11px] text-[#e6f0e6]
-                              pr-2 pt-1 hover:text-green-400">
-                    Copyright @ 2023</p>
+                              pr-2 pt-1 hover:text-[#2cc1fc]">
+                    Copyright @ 2023 All Rights Reserved.</p>
 
                 <Link to="/">
                     <div className="flex">
-                        <h1 className="text-1xl text-secondary">
-                            Organic Shop</h1>
-                        <img className="h-5 w-5 top-0 ml-1"
+                        <img className="h-7 w-full top-0 ml-1"
                              src={logo} alt=""/>
                     </div>
                 </Link>
