@@ -8,6 +8,8 @@ import home_banner6 from "../../../images/home_banner6.jpg";
 import pc1 from "../../../images/pc1.jpg";
 import kb from "../../../images/keyboard.jpg";
 import usb from "../../../images/usb_drive.jpg";
+import head_set from "../../../images/head_set.jpg";
+import mouse from "../../../images/mouse.jpg";
 import mf1 from "../../../images/manufactor_logo_1.png";
 import mf2 from "../../../images/manufactor_logo_2.png";
 import mf3 from "../../../images/manufactor_logo_3.png";
@@ -158,7 +160,7 @@ export class Home extends Component {
                     <div
                         className="ml-16 w-72 mr-2 mb-16 justify-center items-center rounded-2xl hover:shadow-[#2cc1fc] hover:shadow-2xl">
                         <div className="h-60 pt-4 bg-white rounded-t-2xl">
-                            <img className="h-full mx-auto" src={kb} alt=""/>
+                            <img className="h-full mx-auto" src={head_set} alt=""/>
                         </div>
                         <div className="justify-center bg-[#4646469c]">
                             <div>
@@ -183,7 +185,7 @@ export class Home extends Component {
                     <div
                         className="ml-16 w-72 mr-2 mb-16 justify-center items-center rounded-2xl hover:shadow-[#2cc1fc] hover:shadow-2xl">
                         <div className="h-60 pt-4 bg-white rounded-t-2xl">
-                            <img className="h-full mx-auto" src={pc1} alt=""/>
+                            <img className="h-full mx-auto" src={mouse} alt=""/>
                         </div>
                         <div className="justify-center bg-[#4646469c]">
                             <div>
