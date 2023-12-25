@@ -59,3 +59,33 @@
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
+
+@keyframes animation {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-16.6%);
+    }
+    40% {
+        transform: translateX(-33.3%);
+    }
+    60% {
+        transform: translateX(-50%);
+    }
+    80% {
+        transform: translateX(-66.7%);
+    }
+    100% {
+        transform: translateX(-83.35%);
+    }
+}
+
+
+.home-banner-animate {
+    animation-name: animation;
+    animation-delay: 2s;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

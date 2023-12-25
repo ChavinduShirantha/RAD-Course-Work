@@ -1,5 +1,10 @@
 import {Component} from "react";
-import home_banner from "../../../images/home_banner.jpg";
+import home_banner1 from "../../../images/home_banner1.jpg";
+import home_banner2 from "../../../images/home_banner2.jpg";
+import home_banner3 from "../../../images/home_banner3.jpg";
+import home_banner4 from "../../../images/home_banner4.jpg";
+import home_banner5 from "../../../images/home_banner5.jpg";
+import home_banner6 from "../../../images/home_banner6.jpg";
 import pc1 from "../../../images/pc1.jpg";
 import kb from "../../../images/keyboard.jpg";
 import usb from "../../../images/usb_drive.jpg";
@@ -25,13 +30,32 @@ import mf18 from "../../../images/manufactor_logo_18.png";
 
 export class Home extends Component {
     render() {
-        const images = [mf1, mf2, mf3, mf4, mf5, mf6, mf7, mf8, mf9, mf10, mf11, mf12, mf13, mf14, mf15, mf16, mf17];
+        const images = [mf1, mf2, mf3, mf4, mf5, mf6, mf7, mf8, mf9, mf10, mf11, mf12, mf13, mf14, mf15, mf16, mf17, mf18];
+
+        const home_banner = [home_banner1, home_banner2, home_banner3, home_banner4, home_banner5,home_banner6];
+
         return (
             <div className="flex">
                 <div
                     className="flex flex-wrap justify-start items-center mx-auto bg-[url(images/main_bg.jpg)] bg-cover">
                     <div className="mb-16">
-                        <img className="w-full" src={home_banner} alt=""/>
+                        <div className="xl:container mx-auto">
+                            <div className=" flex items-center  justify-center">
+                                <div className="w-[600%] overflow-hidden relative">
+                                    <div
+                                        className="w-[600%] flex items-center home-banner-animate">
+                                        {home_banner.map((i, index) => {
+                                            return (
+                                                <div className="flex justify-center items-start w-full">
+                                                    <img key={index} src={i}/>
+                                                </div>
+                                            );
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {/*<img className="w-full" src={home_banner1} alt=""/>*/}
                     </div>
                     <div className="pl-16 pr-16 xl:container mx-auto mb-16">
                         <div className=" flex items-center  justify-center">
