@@ -1,14 +1,61 @@
-.each-slide-effect > div {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-size: cover;
-    height: 350px;
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    5% {
+        transform: translateX(-5%);
+    }
+    10% {
+        transform: translateX(-10%);
+    }
+    15% {
+        transform: translateX(-15%);
+    }
+    20% {
+        transform: translateX(-20%);
+    }
+    25% {
+        transform: translateX(-25%);
+    }
+    30% {
+        transform: translateX(-30%);
+    }
+    35% {
+        transform: translateX(-35%);
+    }
+    40% {
+        transform: translateX(-40%);
+    }
+    45% {
+        transform: translateX(-45%);
+    }
+    50% {
+        transform: translateX(-50%);
+    }
+    55% {
+        transform: translateX(-55%);
+    }
+    60% {
+        transform: translateX(-60%);
+    }
+    65% {
+        transform: translateX(-65%);
+    }
+    70% {
+        transform: translateX(-70%);
+    }
+    75% {
+        transform: translateX(-75%);
+    }
+    80% {
+        transform: translateX(-80.5%);
+    }
 }
 
-.each-slide-effect span {
-    padding: 20px;
-    font-size: 20px;
-    background: #efefef;
-    text-align: center;
+.animate {
+    animation-name: scroll;
+    animation-delay: 2s;
+    animation-duration: 80s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }

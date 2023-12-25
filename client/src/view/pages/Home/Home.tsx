@@ -1,17 +1,60 @@
-import {Component, SetStateAction} from "react";
+import {Component} from "react";
 import home_banner from "../../../images/home_banner.jpg";
 import pc1 from "../../../images/pc1.jpg";
 import kb from "../../../images/keyboard.jpg";
 import usb from "../../../images/usb_drive.jpg";
+import mf1 from "../../../images/manufactor_logo_1.png";
+import mf2 from "../../../images/manufactor_logo_2.png";
+import mf3 from "../../../images/manufactor_logo_3.png";
+import mf4 from "../../../images/manufactor_logo_4.png";
+import mf5 from "../../../images/manufactor_logo_5.png";
+import mf6 from "../../../images/manufactor_logo_6.png";
+import mf7 from "../../../images/manufactor_logo_7.png";
+import mf8 from "../../../images/manufactor_logo_8.png";
+import mf9 from "../../../images/manufactor_logo_9.png";
+import mf10 from "../../../images/manufactor_logo_10.png";
+import mf11 from "../../../images/manufactor_logo_11.png";
+import mf12 from "../../../images/manufactor_logo_12.png";
+import mf13 from "../../../images/manufactor_logo_13.png";
+import mf14 from "../../../images/manufactor_logo_14.png";
+import mf15 from "../../../images/manufactor_logo_15.png";
+import mf16 from "../../../images/manufactor_logo_16.png";
+import mf17 from "../../../images/manufactor_logo_17.png";
+import mf18 from "../../../images/manufactor_logo_18.png";
+
 
 export class Home extends Component {
     render() {
+        const images = [mf1, mf2, mf3, mf4, mf5, mf6, mf7, mf8, mf9, mf10, mf11, mf12, mf13, mf14, mf15, mf16, mf17];
         return (
             <div className="flex">
                 <div
                     className="flex flex-wrap justify-start items-center mx-auto bg-[url(images/main_bg.jpg)] bg-cover">
                     <div className="mb-16">
                         <img className="w-full" src={home_banner} alt=""/>
+                    </div>
+                    <div className="pl-16 pr-16 xl:container mx-auto mb-16">
+                        <div className=" flex items-center  justify-center">
+                            <div className="w-[500%] h-20 overflow-hidden relative">
+                                <div
+                                    className="w-[500%] flex items-center h-20 justify-around absolute left-0 gap-20 animate">
+                                    {images.map((i, index) => {
+                                        return (
+                                            <div className="flex justify-center items-start w-[20rem]">
+                                                <img key={index} src={i}/>
+                                            </div>
+                                        );
+                                    })}
+                                    {images.map((i, index) => {
+                                        return (
+                                            <div className="flex justify-center items-start w-[20rem]">
+                                                <img key={index} src={i}/>
+                                            </div>
+                                        );
+                                    })}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div
                         className="ml-16 w-72 mr-2 mb-16 justify-center items-center rounded-2xl hover:shadow-[#2cc1fc] hover:shadow-2xl">
