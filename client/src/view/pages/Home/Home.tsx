@@ -1,15 +1,16 @@
 import {Component} from "react";
+import {Product} from "../../common/Product/Product";
 import home_banner1 from "../../../images/home_banner1.jpg";
 import home_banner2 from "../../../images/home_banner2.jpg";
 import home_banner3 from "../../../images/home_banner3.jpg";
 import home_banner4 from "../../../images/home_banner4.jpg";
 import home_banner5 from "../../../images/home_banner5.jpg";
 import home_banner6 from "../../../images/home_banner6.jpg";
-import pc1 from "../../../images/pc1.jpg";
-import kb from "../../../images/keyboard.jpg";
-import usb from "../../../images/usb_drive.jpg";
-import head_set from "../../../images/head_set.jpg";
-import mouse from "../../../images/mouse.jpg";
+import pc1 from "../../../images/products/pc1.jpg";
+import kb from "../../../images/products/keyboard.jpg";
+import usb from "../../../images/products/usb_drive.jpg";
+import head_set from "../../../images/products/head_set.jpg";
+import mouse from "../../../images/products/mouse.jpg";
 import mf1 from "../../../images/manufactor_logo_1.png";
 import mf2 from "../../../images/manufactor_logo_2.png";
 import mf3 from "../../../images/manufactor_logo_3.png";
@@ -57,6 +58,9 @@ export class Home extends Component {
         const images = [mf1, mf2, mf3, mf4, mf5, mf6, mf7, mf8, mf9, mf10, mf11, mf12, mf13, mf14, mf15, mf16, mf17, mf18];
 
         const home_banner = [home_banner1, home_banner2, home_banner3, home_banner4, home_banner5,home_banner6];
+
+        // @ts-ignore
+        const {data}=this.state;
 
         return (
             <div className="flex">
@@ -230,6 +234,11 @@ export class Home extends Component {
                         </div>
                     </div>
                 */}
+                    {
+                        data.map((product:any)=>(
+                            <Product key={product.id} data={product}/>
+                        ))
+                    }
                 </div>
             </div>
         );
