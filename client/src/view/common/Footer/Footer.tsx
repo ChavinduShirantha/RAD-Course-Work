@@ -1,5 +1,5 @@
 import {Component} from "react";
-import logo from '../../../images/logo.png'
+import logo from '../../../images/logo2.png'
 import { Link } from "react-router-dom";
 
 export class Footer extends Component {
@@ -35,8 +35,10 @@ export class Footer extends Component {
                     <div className="basis-1/4 pt-10">
                         <Link to="/">
                             <div className="flex flex-wrap">
-                                <img className=" w-2/3 top-0 ml-1"
+                                <img className=" w-1/4 top-0 ml-1"
                                      src={logo} alt=""/>
+                                <h1 className="ml-2 mt-6 uppercase text-[18px] text-[#0af] font-bold">Techno
+                                    computers</h1>
                             </div>
                         </Link>
                         <h4 className="text-[14px] text-white pr-4 pt-3">Inspired by truly loved customers and established in 2005 as Tulip Computers. Well known in
@@ -55,10 +57,20 @@ export class Footer extends Component {
                         <p className="text-[15px] text-white">No.61A, Anagarika Dharmapala Mawatha, Matara, Sri
                             Lanka.</p></div>
                 </div>
-                <div className=" text-center justify-center mt-10 pl-0 bg-black pb-10 pt-10">
+                <div className=" text-center justify-center mt-10 pl-0 bg-black pb-10 pt-6">
+                    <div className="flex justify-center mb-2">
                     <p className="text-[11px] text-[#e6f0e6]
-                                  pr-2 pt-1 hover:text-[#2cc1fc] mb-2">
+                                  pr-2 pt-4 hover:text-[#2cc1fc] mb-2">
                         Copyright @ 2023 All Rights Reserved.</p>
+                    <Link to="/">
+                        <div className="flex">
+                            <img className="h-10 top-0 ml-1 mt-1"
+                                 src={logo} alt=""/>
+                            <h1 className="ml-5 mt-3 text-1xl text-[#0af] uppercase">
+                                Techno computers</h1>
+                        </div>
+                    </Link>
+                    </div>
                     <p className="text-[11px] text-[#e6f0e6] text-center
                                   pr-2 pt-1 hover:text-[#2cc1fc]">
                         Designed By <span className="font-bold">Chavindu Shirantha</span>.</p>

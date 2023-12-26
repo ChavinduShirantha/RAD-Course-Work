@@ -1,5 +1,5 @@
 import {Component} from "react";
-import logo from '../../../images/logo.png'
+import logo from '../../../images/logo2.png'
 import {Link} from "react-router-dom";
 
 export class Navbar extends Component {
@@ -9,8 +9,9 @@ export class Navbar extends Component {
 
                 <Link to="/">
                     <div className="flex">
-                        <img className="h-16 w-full ml-6 pt-1" src={logo}
+                        <img className="h-16 ml-6 pt-1" src={logo}
                              alt=""/>
+                        <h1 className="ml-2 mt-5 uppercase text-[18px] text-[#0af] font-bold" >Techno computers</h1>
                     </div>
                 </Link>
 

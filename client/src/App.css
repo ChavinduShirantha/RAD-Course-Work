@@ -55,7 +55,7 @@
 .animate {
     animation-name: scroll;
     animation-delay: 2s;
-    animation-duration: 80s;
+    animation-duration: 100s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
 }
