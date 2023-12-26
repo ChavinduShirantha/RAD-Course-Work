@@ -31,6 +31,28 @@ import mf18 from "../../../images/manufactor_logo_18.png";
 
 
 export class Home extends Component {
+
+    constructor(props:{}|Readonly<{}>) {
+        super(props);
+        this.state={
+            data:[],
+        }
+    }
+
+    componentDidMount() {
+        this.fetchData();
+    }
+
+    fetchData=async ()=>{
+        try {
+            const response = await fetch('./product-data.json');
+            const jsonData = await response.json();
+            this.setState({data: jsonData});
+        }catch (error){
+            console.log('Error Fetching Data ', error);
+        }
+    }
+
     render() {
         const images = [mf1, mf2, mf3, mf4, mf5, mf6, mf7, mf8, mf9, mf10, mf11, mf12, mf13, mf14, mf15, mf16, mf17, mf18];
 
@@ -82,7 +104,7 @@ export class Home extends Component {
                             </div>
                         </div>
                     </div>
-                    <div
+                    {/*<div
                         className="ml-16 w-72 mr-2 mb-16 justify-center items-center rounded-2xl hover:shadow-[#2cc1fc] hover:shadow-2xl">
                         <div className="h-60 pt-4 bg-white rounded-t-2xl">
                             <img className="h-full mx-auto" src={pc1} alt=""/>
@@ -207,6 +229,7 @@ export class Home extends Component {
                             </button>
                         </div>
                     </div>
+                */}
                 </div>
             </div>
         );
