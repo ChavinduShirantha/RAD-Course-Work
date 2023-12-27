@@ -37,7 +37,7 @@ export class Contact extends Component {
                         <div className="pb-2">
                             <label className="text-white text-[14px]">Your Message :</label>
                             <textarea
-                                className="block h-40 w-11/12 px-4 py-2 mt-2 bg-[#444544] text-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                                className="block h-40 w-11/12 px-4 py-2 mt-2 bg-[#444544] text-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40 resize-none"/>
                         </div>
 
                         <div className="mt-2 float-right">

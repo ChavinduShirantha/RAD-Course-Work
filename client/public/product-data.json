@@ -38,5 +38,61 @@
     "price": "1,600.00",
     "currency": "LKR",
     "image": "usb_drive.jpg"
+  },
+  {
+    "id": 6,
+    "description": "Intel Core I3-8GB-128GB+1TB 10th Gen PC",
+    "name": "- Brand new desktop -",
+    "price": "122,200.00",
+    "currency": "LKR",
+    "image": "pc1.jpg"
+  },
+  {
+    "id": 7,
+    "description": "Havit Gamenote H2026d Gaming Headset",
+    "name": "- Speaker &amp; Headphone -",
+    "price": "4,500.00",
+    "currency": "LKR",
+    "image": "head_set.jpg"
+  },
+  {
+    "id": 8,
+    "description": "Havit Gamenote MS1027 Gaming Mouse",
+    "name": "- Keyboard & Mouse -",
+    "price": "1,400.00",
+    "currency": "LKR",
+    "image": "mouse.jpg"
+  },
+  {
+    "id": 9,
+    "description": "Havit KB500L RGB Backlit Gaming Keyboard",
+    "name": "- Keyboard & Mouse -",
+    "price": "3,800.00",
+    "currency": "LKR",
+    "image": "keyboard.jpg"
+  },
+  {
+    "id": 10,
+    "description": "Kingston DataTraveler Exodia 64GB USB Flash Drive",
+    "name": "- Pen Drive & SD Card -",
+    "price": "1,600.00",
+    "currency": "LKR",
+    "image": "usb_drive.jpg"
+  },
+  {
+    "id": 11,
+    "description": "Havit KB500L RGB Backlit Gaming Keyboard",
+    "name": "- Keyboard & Mouse -",
+    "price": "3,800.00",
+    "currency": "LKR",
+    "image": "keyboard.jpg"
+  },
+  {
+    "id": 12,
+    "description": "Kingston DataTraveler Exodia 64GB USB Flash Drive",
+    "name": "- Pen Drive & SD Card -",
+    "price": "1,600.00",
+    "currency": "LKR",
+    "image": "usb_drive.jpg"
   }
 ]
