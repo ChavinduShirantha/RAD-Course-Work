@@ -5,7 +5,7 @@
     "name": "- Brand new desktop -",
     "price": "122,200.00",
     "currency": "LKR",
-    "image": "pc1.jpg"
+    "image": "product1.jpg"
   },
   {
     "id": 2,
@@ -13,23 +13,23 @@
     "name": "- Speaker &amp; Headphone -",
     "price": "4,500.00",
     "currency": "LKR",
-    "image": "head_set.jpg"
+    "image": "product2.jpg"
   },
   {
     "id": 3,
-    "description": "Havit Gamenote MS1027 Gaming Mouse",
-    "name": "- Keyboard & Mouse -",
-    "price": "1,400.00",
-    "currency": "LKR",
-    "image": "mouse.jpg"
-  },
-  {
-    "id": 4,
     "description": "Havit KB500L RGB Backlit Gaming Keyboard",
     "name": "- Keyboard & Mouse -",
     "price": "3,800.00",
     "currency": "LKR",
-    "image": "keyboard.jpg"
+    "image": "product3.jpg"
+  },
+  {
+    "id": 4,
+    "description": "Havit Gamenote MS1027 Gaming Mouse",
+    "name": "- Keyboard & Mouse -",
+    "price": "1,400.00",
+    "currency": "LKR",
+    "image": "product4.jpg"
   },
   {
     "id": 5,
@@ -37,7 +37,7 @@
     "name": "- Pen Drive & SD Card -",
     "price": "1,600.00",
     "currency": "LKR",
-    "image": "usb_drive.jpg"
+    "image": "product5.jpg"
   },
   {
     "id": 6,
@@ -45,7 +45,7 @@
     "name": "- Brand new desktop -",
     "price": "122,200.00",
     "currency": "LKR",
-    "image": "pc1.jpg"
+    "image": "product1.jpg"
   },
   {
     "id": 7,
@@ -53,46 +53,46 @@
     "name": "- Speaker &amp; Headphone -",
     "price": "4,500.00",
     "currency": "LKR",
-    "image": "head_set.jpg"
+    "image": "product2.jpg"
   },
   {
     "id": 8,
-    "description": "Havit Gamenote MS1027 Gaming Mouse",
+    "description": "Havit KB500L RGB Backlit Gaming Keyboard",
     "name": "- Keyboard & Mouse -",
-    "price": "1,400.00",
+    "price": "3,800.00",
     "currency": "LKR",
-    "image": "mouse.jpg"
+    "image": "product3.jpg"
   },
   {
     "id": 9,
-    "description": "Havit KB500L RGB Backlit Gaming Keyboard",
-    "name": "- Keyboard & Mouse -",
-    "price": "3,800.00",
+    "description": "Western Digital My Passport 5TB (External)",
+    "name": "- Storage & ODD -",
+    "price": "38,900.00",
     "currency": "LKR",
-    "image": "keyboard.jpg"
+    "image": "product9.jpg"
   },
   {
     "id": 10,
-    "description": "Kingston DataTraveler Exodia 64GB USB Flash Drive",
-    "name": "- Pen Drive & SD Card -",
-    "price": "1,600.00",
+    "description": "KINGSTON NV2 250GB PCIe Gen 4 x 4 NVMe",
+    "name": "- SSD -",
+    "price": "10,300.00",
     "currency": "LKR",
-    "image": "usb_drive.jpg"
+    "image": "product8.jpg"
   },
   {
     "id": 11,
-    "description": "Havit KB500L RGB Backlit Gaming Keyboard",
-    "name": "- Keyboard & Mouse -",
-    "price": "3,800.00",
+    "description": "PATRIOT SIGNATURE LINE DDR4 4GB 2666MHz LAPTOP",
+    "name": "- Memory -",
+    "price": "5,500.00",
     "currency": "LKR",
-    "image": "keyboard.jpg"
+    "image": "product6.jpg"
   },
   {
     "id": 12,
-    "description": "Kingston DataTraveler Exodia 64GB USB Flash Drive",
-    "name": "- Pen Drive & SD Card -",
-    "price": "1,600.00",
+    "description": "Lexar NM620 256GB PCIe Gen 3 x 4 NVMe",
+    "name": "- SSD -",
+    "price": "8,200.00",
     "currency": "LKR",
-    "image": "usb_drive.jpg"
+    "image": "product7.jpg"
   }
 ]
