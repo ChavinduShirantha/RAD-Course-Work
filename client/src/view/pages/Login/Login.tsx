@@ -1,4 +1,5 @@
 import {Component} from "react";
+import {Link} from "react-router-dom";
 
 export class Login extends Component {
     render() {
@@ -46,7 +47,7 @@ export class Login extends Component {
 
                     <button
                         className="mt-6 w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#2cc1fc] rounded-md hover:bg-white hover:text-black hover:border-black border-[1px]">
-                        Create an Account
+                        <Link to="/signup">Create an Account</Link>
                     </button>
                 </div>
             </div>

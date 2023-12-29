@@ -11,7 +11,7 @@ export class Navbar extends Component {
                     <div className="flex">
                         <img className="h-16 ml-6 pt-1" src={logo}
                              alt=""/>
-                        <h1 className="ml-2 mt-5 uppercase text-[18px] text-[#0af] font-bold" >Techno computers</h1>
+                        <h1 className="ml-2 mt-5 uppercase text-[18px] text-[#0af] font-bold">Techno computers</h1>
                     </div>
                 </Link>
 
@@ -30,11 +30,18 @@ export class Navbar extends Component {
                     </li>
                 </ul>
 
-                <button className="text-[14px] font-bold text-[#e6f0e6]
+                <div>
+                    <button className="text-[14px] font-bold text-[#e6f0e6]
                                    bg-[#2cc1fc] pl-3 pr-3 h-10 mt-3
-                                   hover:text-tertiary rounded ">
-                    <Link to="/login">Sign In</Link>
-                </button>
+                                   hover:text-tertiary rounded mr-5">
+                        <Link to="/login">Sign In</Link>
+                    </button>
+                    <button className="text-[14px] font-bold text-[#e6f0e6]
+                                   bg-[#36C64C] pl-3 pr-3 h-10 mt-3
+                                   hover:text-tertiary rounded">
+                        <Link to="/signup">Sign Up</Link>
+                    </button>
+                </div>
             </div>
         );
     }

@@ -3,6 +3,7 @@ import './App.css';
 import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {DefaultLayout} from "./view/common/DefaultLayout/DefaultLayout";
 import {Login} from "./view/pages/Login/Login";
+import {SignUp} from "./view/pages/SignUp/SignUp";
 
 function App() {
     return (
@@ -13,6 +14,9 @@ function App() {
                 </Route>
                 <Route path="/login"
                        Component={Login}>
+                </Route>
+                <Route path="/signup"
+                       Component={SignUp}>
                 </Route>
             </Routes>
         </BrowserRouter>
