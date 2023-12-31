@@ -10,7 +10,7 @@
   {
     "id": 2,
     "description": "Havit Gamenote H2026d Gaming Headset",
-    "name": "- Speaker &amp; Headphone -",
+    "name": "- Speaker & Headphone -",
     "price": "4,500.00",
     "currency": "LKR",
     "image": "product2.jpg"
@@ -41,19 +41,19 @@
   },
   {
     "id": 6,
-    "description": "Intel Core I3-8GB-128GB+1TB 10th Gen PC",
-    "name": "- Brand new desktop -",
-    "price": "122,200.00",
+    "description": "Havit MP830 Gaming Mouse pad",
+    "name": "- Accessories -",
+    "price": "1,800.00",
     "currency": "LKR",
-    "image": "product1.jpg"
+    "image": "product10.jpg"
   },
   {
     "id": 7,
-    "description": "Havit Gamenote H2026d Gaming Headset",
-    "name": "- Speaker &amp; Headphone -",
-    "price": "4,500.00",
+    "description": "Havit GC930 Gaming Chair",
+    "name": "- Accessories -",
+    "price": "00.00",
     "currency": "LKR",
-    "image": "product2.jpg"
+    "image": "product11.jpg"
   },
   {
     "id": 8,
