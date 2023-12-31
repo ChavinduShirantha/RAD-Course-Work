@@ -64,7 +64,7 @@ export class Home extends Component {
                     <div className="mb-16">
                         <div className="xl:container mx-auto">
                             <div className=" flex items-center  justify-center">
-                                <div className="w-[600%] overflow-hidden relative">
+                                <div className="w-[600%] overflow-hidden ">
                                     <div
                                         className="w-[600%] flex items-center home-banner-animate">
                                         {home_banner.map((i, index) => {
