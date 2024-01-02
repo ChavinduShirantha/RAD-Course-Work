@@ -80,7 +80,7 @@ export class Home extends Component {
                         </div>
                         {/*<img className="w-full" src={home_banner1} alt=""/>*/}
                     </div>
-                    <div className="pl-16 pr-16 xl:container mx-auto mb-16">
+                    <div className="pl-16 pr-16 xl:container xl:block hidden mx-auto mb-16">
                         <div className=" flex items-center  justify-center">
                             <div className="w-[500%] h-20 overflow-hidden relative">
                                 <div
