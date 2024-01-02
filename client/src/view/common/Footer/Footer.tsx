@@ -1,6 +1,8 @@
 import {Component} from "react";
 import logo from '../../../images/logo2.png'
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faLocationDot, faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons'
 
 export class Footer extends Component {
     render() {
@@ -41,35 +43,52 @@ export class Footer extends Component {
                                     computers</h1>
                             </div>
                         </Link>
-                        <h4 className="text-[14px] text-white pr-4 pt-3">Inspired by truly loved customers and established in 2005 as Tulip Computers. Well known in
+                        <h4 className="text-[14px] text-white pr-4 pt-3">Inspired by truly loved customers and
+                            established in 2005 as Tulip Computers. Well known in
                             PC industry all over Sri Lanka with The best PCs and Accessories..</h4>
                     </div>
                     <div className="basis-1/4 pt-10">
                         <h4 className="pt-3 text-[16px] font-bold text-white uppercase">Head Office</h4>
-                        <p className="text-[15px] text-white">No.50, New Road, Ambalangoda, Sri Lanka.</p>
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faLocationDot}/> No.50, New
+                            Road, Ambalangoda, Sri Lanka.</p>
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faPhone}/> Call Us: +94 912
+                            255 942</p>
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faEnvelope}/> Email:
+                            info@tulipcom.lk</p>
                     </div>
                     <div className="basis-1/4 pt-10">
                         <h4 className="pt-3 text-[16px] font-bold text-white uppercase">Galle Branch</h4>
-                        <p className="text-[15px] text-white">No.207C, Wakwella Road, Galle, Sri Lanka.</p>
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faLocationDot}/> No.207C, Wakwella
+                            Road, Galle, Sri Lanka.</p>
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faPhone}/> Call Us: +94 912
+                            246 200</p>
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faEnvelope}/> Email:
+                            info@tulipcom.lk</p>
                     </div>
                     <div className="basis-1/4 pt-10">
                         <h4 className="pt-3 text-[16px] font-bold text-white uppercase">Matara Branch</h4>
-                        <p className="text-[15px] text-white">No.61A, Anagarika Dharmapala Mawatha, Matara, Sri
-                            Lanka.</p></div>
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faLocationDot}/> No.61A, Anagarika
+                            Dharmapala Mawatha, Matara, Sri
+                            Lanka.</p>
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faPhone}/> Call Us: +94 412
+                            050 800</p>
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faEnvelope}/> Email:
+                            info@tulipcom.lk</p>
+                    </div>
                 </div>
                 <div className=" text-center justify-center mt-10 pl-0 bg-black pb-10 pt-6">
                     <div className="flex justify-center mb-2">
-                    <p className="text-[11px] text-[#e6f0e6]
+                        <p className="text-[11px] text-[#e6f0e6]
                                   pr-2 pt-4 hover:text-[#2cc1fc] mb-2">
-                        Copyright @ 2023 All Rights Reserved.</p>
-                    <Link to="/">
-                        <div className="flex">
-                            <img className="h-10 top-0 ml-1 mt-1"
-                                 src={logo} alt=""/>
-                            <h1 className="ml-5 mt-3 text-1xl text-[#0af] uppercase">
-                                Techno computers</h1>
-                        </div>
-                    </Link>
+                            Copyright @ 2023 All Rights Reserved.</p>
+                        <Link to="/">
+                            <div className="flex">
+                                <img className="h-10 top-0 ml-1 mt-1"
+                                     src={logo} alt=""/>
+                                <h1 className="ml-5 mt-3 text-1xl text-[#0af] uppercase">
+                                    Techno computers</h1>
+                            </div>
+                        </Link>
                     </div>
                     <p className="text-[11px] text-[#e6f0e6] text-center
                                   pr-2 pt-1 hover:text-[#2cc1fc]">
