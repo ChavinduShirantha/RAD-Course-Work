@@ -1,10 +1,21 @@
 import {Component} from "react";
+import {ModifyCart} from "../ModifyCart/ModifyCart";
 
 interface ProductProps {
     data: any
 }
+interface ProductState {
+    isActive: boolean
+}
 
-export class Product extends Component<ProductProps> {
+
+export class Product extends Component<ProductProps,ProductState> {
+    constructor(props: ProductProps) {
+        super(props);
+        this.state = {
+            isActive: false
+        }
+    }
     render() {
         const {data} = this.props;
         const image = require('../../../images/products/' + data.image);
@@ -29,13 +40,20 @@ export class Product extends Component<ProductProps> {
                     </div>
                 </div>
                 <div className=" justify-center">
+                    {
+                        this.state.isActive?<ModifyCart data={{product:data,isAdded:this.state.isActive}}/>:
                     <button
-                        className="w-full h-10 p-[2.5px] bg-[#2cc1fc] text-white text-[14px] rounded-b-2xl">Add
-                        to
-                        Cart
+                        className="w-full h-10 p-[2.5px] bg-[#2cc1fc] text-white text-[14px] rounded-b-2xl" onClick={this.addToCartOnClick}>Add to Cart
                     </button>
+                    }
                 </div>
             </div>
         );
+    }
+    private addToCartOnClick = () => {
+        this.setState({isActive: !this.state.isActive}, () => {
+            console.log(this.state.isActive);
+            // alert(this.state.isActive);
+        })
     }
 }
