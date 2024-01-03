@@ -36,7 +36,7 @@ export class Product extends Component<ProductProps,ProductState> {
                     </div>
                     <div className="ml-1 pb-2 p-[0.3px] pr-2">
                         <h3 className="text-[16px] font-bold text-center text-white pl-2">{data.price}
-                            <small className="text-[10px] ml-1">{data.currency}</small></h3>
+                            <small className="text-[16px]">{data.currency}</small></h3>
                     </div>
                 </div>
                 <div className=" justify-center">
