@@ -42,7 +42,7 @@ export class Contact extends Component {
 
                         <div className="mt-2 float-right">
                             <button type="button"
-                                    className="mt-5 mr-14 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px] font-bold text-white rounded">Sent
+                                    className="mt-5 mr-14 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px] font-bold text-white rounded hover:bg-[#444544] hover:border-[2px] hover:border-[#2cc1fc] hover:text-[#2cc1fc]">Sent
                             </button>
                         </div>
                     </form>

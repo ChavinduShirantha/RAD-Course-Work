@@ -3,6 +3,7 @@ import logo from '../../../images/logo2.png'
 import {Link} from "react-router-dom";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faLocationDot, faPhone, faEnvelope} from '@fortawesome/free-solid-svg-icons'
+import {faFacebookF, faWhatsapp, faTwitter, faInstagram, faGooglePlus} from '@fortawesome/free-brands-svg-icons'
 
 export class Footer extends Component {
     render() {
@@ -26,7 +27,7 @@ export class Footer extends Component {
                             <input type="email" placeholder="Enter your email"
                                    className="block w-11/12 px-5 py-2 bg-[#444544] text-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
                             <button type="button"
-                                    className="ml-5 mr-14 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px] font-bold text-white rounded uppercase">Subscribe
+                                    className="ml-5 mr-14 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px] font-bold text-white rounded uppercase hover:bg-[#444544] hover:text-[#2cc1fc] hover:border-[2px] hover:border-[#2cc1fc]">Subscribe
                             </button>
                         </div>
                     </div>
@@ -46,6 +47,24 @@ export class Footer extends Component {
                         <h4 className="text-[14px] text-white pr-4 pt-3">Inspired by truly loved customers and
                             established in 2005 as Tulip Computers. Well known in
                             PC industry all over Sri Lanka with The best PCs and Accessories..</h4>
+
+                        <ul className="flex text-[#cbcbcb] pt-5 text-3xl">
+                            <li className="mr-10 hover:text-[#0af] cursor-pointer hover:scale-150 "><FontAwesomeIcon
+                                icon={faFacebookF}/>
+                            </li>
+                            <li className="mr-10 hover:text-[#0af] cursor-pointer hover:scale-150 "><FontAwesomeIcon
+                                icon={faWhatsapp}/>
+                            </li>
+                            <li className="mr-10 hover:text-[#0af] cursor-pointer hover:scale-150 "><FontAwesomeIcon
+                                icon={faTwitter}/>
+                            </li>
+                            <li className="mr-10 hover:text-[#0af] cursor-pointer hover:scale-150 "><FontAwesomeIcon
+                                icon={faInstagram}/>
+                            </li>
+                            <li className="mr-10 hover:text-[#0af] cursor-pointer hover:scale-150 "><FontAwesomeIcon
+                                icon={faGooglePlus}/></li>
+                        </ul>
+
                     </div>
                     <div className="basis-1/4 pt-10">
                         <h4 className="pt-3 text-[16px] font-bold text-white uppercase">Head Office</h4>
@@ -58,7 +77,8 @@ export class Footer extends Component {
                     </div>
                     <div className="basis-1/4 pt-10">
                         <h4 className="pt-3 text-[16px] font-bold text-white uppercase">Galle Branch</h4>
-                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faLocationDot}/> No.207C, Wakwella
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faLocationDot}/> No.207C,
+                            Wakwella
                             Road, Galle, Sri Lanka.</p>
                         <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faPhone}/> Call Us: +94 912
                             246 200</p>
@@ -67,7 +87,8 @@ export class Footer extends Component {
                     </div>
                     <div className="basis-1/4 pt-10">
                         <h4 className="pt-3 text-[16px] font-bold text-white uppercase">Matara Branch</h4>
-                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faLocationDot}/> No.61A, Anagarika
+                        <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faLocationDot}/> No.61A,
+                            Anagarika
                             Dharmapala Mawatha, Matara, Sri
                             Lanka.</p>
                         <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faPhone}/> Call Us: +94 412
