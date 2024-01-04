@@ -17,16 +17,17 @@ export class About extends Component {
                                    pb-3
                                    font-bold
                                    text-center">About Us</h2>
-                        <p className="pt-6 pb-8 text-[15px] text-white">Inspired by truly loved customers and established in 2005 as Tulip
+                        <p className="pt-6 pb-8 text-[16px] text-white">Inspired by truly loved customers and
+                            established in 2005 as Techno
                             Computers. Well known in PC industry all over Sri Lanka with The best PCs and Accessories as
                             a
                             seller with unique customer care experience and well managed warranty claiming experience.
                             <br/>
                             <br/>
                             <br/>
-                            Being a leader with the unique passion on PC and giving the best option for customers Tulip
+                            Being a leader with the unique passion on PC and giving the best option for customers Techno
                             Computers have the experiences of decades in Industry as Your trusted PC partner. With the
-                            reliable and durable range of products as Tulip Computers, without any hesitation that we
+                            reliable and durable range of products as Techno Computers, without any hesitation that we
                             can
                             avouch that you will not have any regret choosing us as your new and one and only dependent
                             in
@@ -35,7 +36,7 @@ export class About extends Component {
                             <br/>
                             <br/>
                             With the belief of “Customers is the King” we assure the best ever experience in Quality
-                            products and the best Service. With well manner and experienced staff you will feel Tulip
+                            products and the best Service. With well manner and experienced staff you will feel Techno
                             Computers same as your best friend in life.
                             <br/>
                             <br/>

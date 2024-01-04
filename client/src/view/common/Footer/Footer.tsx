@@ -15,7 +15,7 @@ export class Footer extends Component {
                     <div className="flex flex-row pl-16 pr-16 pt-6">
                         <div className="basis-4/12 mr-40 w-full">
                             <h1 className="text-[18px] font-bold text-[#0af] float-left">KNOW IT ALL FIRST!</h1>
-                            <p className="text-[13px] text-white w-[60vh] float-left">Never Miss Anything From Tulip
+                            <p className="text-[13px] text-white w-[60vh] float-left">Never Miss Anything From Techno
                                 Computers By Signing Up
                                 To Our Newsletter.</p>
                         </div>
@@ -38,14 +38,14 @@ export class Footer extends Component {
                     <div className="basis-1/4 pt-10">
                         <Link to="/">
                             <div className="flex flex-wrap">
-                                <img className=" w-1/4 top-0 ml-1"
+                                <img className=" w-1/4 top-0 ml-1 hover:scale-125"
                                      src={logo} alt=""/>
                                 <h1 className="ml-2 mt-6 uppercase text-[18px] text-[#0af] font-bold">Techno
                                     computers</h1>
                             </div>
                         </Link>
                         <h4 className="text-[14px] text-white pr-4 pt-3">Inspired by truly loved customers and
-                            established in 2005 as Tulip Computers. Well known in
+                            established in 2005 as Techno Computers. Well known in
                             PC industry all over Sri Lanka with The best PCs and Accessories..</h4>
 
                         <ul className="flex text-[#cbcbcb] pt-5 text-3xl">
@@ -73,7 +73,7 @@ export class Footer extends Component {
                         <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faPhone}/> Call Us: +94 912
                             255 942</p>
                         <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faEnvelope}/> Email:
-                            info@tulipcom.lk</p>
+                            info@technocom.lk</p>
                     </div>
                     <div className="basis-1/4 pt-10">
                         <h4 className="pt-3 text-[16px] font-bold text-white uppercase">Galle Branch</h4>
@@ -83,7 +83,7 @@ export class Footer extends Component {
                         <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faPhone}/> Call Us: +94 912
                             246 200</p>
                         <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faEnvelope}/> Email:
-                            info@tulipcom.lk</p>
+                            info@technocom.lk</p>
                     </div>
                     <div className="basis-1/4 pt-10">
                         <h4 className="pt-3 text-[16px] font-bold text-white uppercase">Matara Branch</h4>
@@ -94,7 +94,7 @@ export class Footer extends Component {
                         <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faPhone}/> Call Us: +94 412
                             050 800</p>
                         <p className="pt-3 text-[15px] text-white"><FontAwesomeIcon icon={faEnvelope}/> Email:
-                            info@tulipcom.lk</p>
+                            info@technocom.lk</p>
                     </div>
                 </div>
                 <div className=" text-center justify-center mt-10 pl-0 bg-black pb-10 pt-6">
@@ -104,7 +104,7 @@ export class Footer extends Component {
                             Copyright @ 2023 All Rights Reserved.</p>
                         <Link to="/">
                             <div className="flex">
-                                <img className="h-10 top-0 ml-1 mt-1"
+                                <img className="h-10 top-0 ml-1 mt-1 hover:scale-125"
                                      src={logo} alt=""/>
                                 <h1 className="ml-5 mt-3 text-1xl text-[#0af] uppercase">
                                     Techno computers</h1>

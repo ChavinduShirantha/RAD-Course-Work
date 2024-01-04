@@ -16,6 +16,7 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                         <thead className="h-20 border border-gray-500">
                         <tr className="text-white text-center">
                             <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Id</th>
+                            <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Image</th>
                             <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Product Name
                             </th>
                             <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Unit Price</th>
@@ -37,19 +38,28 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                                 : this.props.itemList.map((item) =>
                                     <tr className="text-white text-center px-1 h-20 border border-gray-500">
                                         <td className="px-1 border border-gray-500">{item.product.id}</td>
+                                        <td className="px-1 border border-gray-500"><img className="h-20 mx-auto"
+                                                                                         src={require("../../../images/products/" + item.product.image)}
+                                                                                         alt=""/>
+                                        </td>
                                         <td className="px-1 border border-gray-500">{item.product.description}</td>
                                         <td className="px-1 border border-gray-500">{item.product.price + ' ' + item.product.currency}</td>
                                         <td className="px-1 border border-gray-500">{item.itemCount}</td>
                                         <td className="px-1 hover:cursor-pointer hover:text-red-600 border border-gray-500">
                                             <FontAwesomeIcon
                                                 icon={faX}/></td>
-                                        <td className="px-1 border border-gray-500">{(item.product.price * item.itemCount) + ' ' + item.product.currency}</td>
+                                        <td className="px-1 border
+                                        border-gray-500">{(item.product.price * item.itemCount) + ' ' + item.product.currency}</td>
                                     </tr>
                                 )
                         }
                         </tbody>
                     </table>
-                    <button className="float-right mt-10 mb-10 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px] font-bold text-white rounded uppercase border-[2px] border-[#2cc1fc] hover:bg-[#444544] hover:text-[#2cc1fc] hover:border-[2px] hover:border-[#2cc1fc] hover:scale-110 ">Purchase</button>
+                    <button className="float-right mt-10 mb-10 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px]
+                    font-bold text-white rounded uppercase border-[2px] border-[#2cc1fc]
+                    hover:bg-[#444544] hover:text-[#2cc1fc] hover:border-[2px]
+                    hover:border-[#2cc1fc] hover:scale-110 ">Purchase
+                    </button>
                 </div>
             </div>
         );
