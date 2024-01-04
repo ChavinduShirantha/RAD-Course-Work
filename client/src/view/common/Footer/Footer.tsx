@@ -27,7 +27,7 @@ export class Footer extends Component {
                             <input type="email" placeholder="Enter your email"
                                    className="block w-11/12 px-5 py-2 bg-[#444544] text-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
                             <button type="button"
-                                    className="ml-5 mr-14 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px] font-bold text-white rounded uppercase hover:bg-[#444544] hover:text-[#2cc1fc] hover:border-[2px] hover:border-[#2cc1fc]">Subscribe
+                                    className="ml-5 mr-14 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px] font-bold text-white rounded uppercase border-[2px] border-[#2cc1fc] hover:bg-[#444544] hover:text-[#2cc1fc] hover:border-[2px] hover:border-[#2cc1fc] hover:scale-110">Subscribe
                             </button>
                         </div>
                     </div>
