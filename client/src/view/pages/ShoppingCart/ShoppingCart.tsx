@@ -40,7 +40,7 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                                 : this.props.itemList.map((item) =>
                                     <tr className="text-white text-center px-1 h-20 border border-gray-500">
                                         <td className="px-1 border border-gray-500">{item.product.id}</td>
-                                        <td className="p-5 border border-gray-500"><img className="h-24 mx-auto"
+                                        <td className="p-5 border border-gray-500"><img className="h-24 mx-auto rounded-lg"
                                                                                         src={require("../../../images/products/" + item.product.image)}
                                                                                         alt=""/>
                                         </td>
