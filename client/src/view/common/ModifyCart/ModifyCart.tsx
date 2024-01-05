@@ -77,11 +77,11 @@ export class ModifyCart extends Component<ModifyCartProps,ModifyCartState> {
         return (
             <div
                 className="w-full h-10 p-[2.5px] bg-[#2cc1fc] flex justify-center items-center text-white text-[14px] rounded-b-2xl">
-                <button className="float-left flex justify-center items-center font-bold text-[20px]   h-5 w-8"
+                <button className="float-left flex justify-center items-center font-bold text-[20px] h-5 w-8"
                         onClick={onDecreaseItemCount}>-
                 </button>
                 <small className="text-[16px] font-bold ml-16 mr-16">{itemCount}</small>
-                <button className="flex justify-center items-center float-right font-bold text-[20px]   h-5 w-8"
+                <button className="flex justify-center items-center float-right font-bold text-[20px] h-5 w-8"
                         onClick={onIncreaseItemCount}>+
                 </button>
             </div>
