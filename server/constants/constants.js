@@ -43,6 +43,69 @@ const productsList = [
         "currency": ".00 LKR",
         "image": "product5.jpg",
         "productState": "out_of_stock.png"
+    },
+    {
+        "id": 6,
+        "description": "Havit MP830 Gaming Mouse pad",
+        "name": "- Accessories -",
+        "price": 1800,
+        "currency": ".00 LKR",
+        "image": "product10.jpg",
+        "productState": "out_of_stock.png"
+    },
+    {
+        "id": 7,
+        "description": "Havit GC930 Gaming Chair",
+        "name": "- Accessories -",
+        "price": 0,
+        "currency": ".00 LKR",
+        "image": "product11.jpg",
+        "productState": "coming_soon.png"
+    },
+    {
+        "id": 8,
+        "description": "Havit KB500L RGB Backlit Gaming Keyboard",
+        "name": "- Keyboard & Mouse -",
+        "price": 3800,
+        "currency": ".00 LKR",
+        "image": "product3.jpg",
+        "productState": "in_stock.png"
+    },
+    {
+        "id": 9,
+        "description": "Western Digital My Passport 5TB (External)",
+        "name": "- Storage & ODD -",
+        "price": 38900,
+        "currency": ".00 LKR",
+        "image": "product9.jpg",
+        "productState": "in_stock.png"
+    },
+    {
+        "id": 10,
+        "description": "KINGSTON NV2 250GB PCIe Gen 4 x 4 NVMe",
+        "name": "- SSD -",
+        "price": 10300,
+        "currency": ".00 LKR",
+        "image": "product8.jpg",
+        "productState": "in_stock.png"
+    },
+    {
+        "id": 11,
+        "description": "PATRIOT SIGNATURE LINE DDR4 4GB 2666MHz LAPTOP",
+        "name": "- Memory -",
+        "price": 5500,
+        "currency": ".00 LKR",
+        "image": "product6.jpg",
+        "productState": "coming_soon.png"
+    },
+    {
+        "id": 12,
+        "description": "Lexar NM620 256GB PCIe Gen 3 x 4 NVMe",
+        "name": "- SSD -",
+        "price": 8200,
+        "currency": ".00 LKR",
+        "image": "product7.jpg",
+        "productState": "new_arrivals.png"
     }
 ];
 
