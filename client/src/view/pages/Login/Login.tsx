@@ -66,8 +66,9 @@ export class Login extends Component<LoginProps, LoginState> {
                                 {
                                     this.state.uname === "admin" && this.state.password === "admin" ?
                                         <Link to="../admin">Login</Link>
-                                         : <Link to="/">Login</Link>
-
+                                        : this.state.uname === "client" && this.state.password === "client" ?
+                                            <Link to="/">Login</Link>
+                                            : "Login"
                                 }
                             </button>
                         </div>

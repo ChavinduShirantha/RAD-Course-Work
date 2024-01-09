@@ -1,9 +1,9 @@
 import {Component} from "react";
 
-export class Admin extends Component {
+export class AdminHome extends Component {
     render() {
         return (
-            <h1>Admin</h1>
+            <h1>Admin Main Content</h1>
         );
     }
 }

@@ -4,7 +4,7 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {DefaultLayout} from "./view/common/DefaultLayout/DefaultLayout";
 import {Login} from "./view/pages/Login/Login";
 import {SignUp} from "./view/pages/SignUp/SignUp";
-import {Admin} from "./view/pages/Admin/Admin";
+import {AdminDefaultLayout} from "./view/adminPages/AdminDefaultLayout/AdminDefaultLayout";
 
 function App() {
     return (
@@ -20,7 +20,7 @@ function App() {
                        Component={SignUp}>
                 </Route>
                 <Route path="/admin"
-                       Component={Admin}>
+                       Component={AdminDefaultLayout}>
                 </Route>
             </Routes>
         </BrowserRouter>
