@@ -1,7 +1,26 @@
 import {Component} from "react";
 import {Link} from "react-router-dom";
 
-export class Login extends Component {
+interface LoginProps {
+    data: any;
+}
+
+interface LoginState {
+    email: string,
+    password: string
+}
+
+export class Login extends Component<LoginProps, LoginState> {
+
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            email: '',
+            password: ''
+        }
+        this.handleMessageInputOnChange = this.handleMessageInputOnChange.bind(this);
+    }
+
     render() {
         return (
             <div className="flex flex-wrap justify-center min-h-screen bg-[#444544]">
@@ -15,8 +34,12 @@ export class Login extends Component {
                                 className="block text-sm font-semibold text-gray-800">
                                 Email
                             </label>
-                            <input type="email"
-                                   className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                            <input type="text"
+                                   className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-[#2cc1fc]
+                                    focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"
+                                   name="email"
+                                   value={this.state.email}
+                                   onChange={this.handleMessageInputOnChange}/>
                         </div>
                         <div className="mb-2">
                             <label
@@ -25,7 +48,11 @@ export class Login extends Component {
                             </label>
                             <input
                                 type="password"
-                                className="block w-full px-4 py-2 mt-2  bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                                className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-[#2cc1fc]
+                                 focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"
+                                name="password"
+                                value={this.state.password}
+                                onChange={this.handleMessageInputOnChange}/>
                         </div>
                         <a href="#"
                            className="text-xs text-[#2cc1fc] hover:underline hover:font-bold">
@@ -33,7 +60,9 @@ export class Login extends Component {
                         </a>
                         <div className="mt-6">
                             <button
-                                className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform bg-[#2cc1fc] rounded-md hover:bg-white hover:text-black hover:border-black border-[1px]">
+                                className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform
+                                bg-[#2cc1fc] rounded-md hover:bg-white hover:text-black hover:border-black border-[1px]"
+                                onClick={this.onLoginBtnClick}>
                                 Login
                             </button>
                         </div>
@@ -42,7 +71,8 @@ export class Login extends Component {
 
 
                     <p className="mt-8 text-xs font-light text-center text-gray-700">
-                        Don't have an account? <br/> Sign up for a free account at our store. Registration is quick and easy. It allows you to be able to order from our shop. To start shopping click register.
+                        Don't have an account? <br/> Sign up for a free account at our store. Registration is quick and
+                        easy. It allows you to be able to order from our shop. To start shopping click register.
                     </p>
 
                     <button
@@ -52,5 +82,22 @@ export class Login extends Component {
                 </div>
             </div>
         );
+    }
+
+    handleMessageInputOnChange(event: { target: { value: any; name: any; } }) {
+        const target = event.target;
+        const name = target.name;
+        const value = target.value;
+
+        // @ts-ignore
+        this.setState({
+            [name]: value
+        });
+    }
+
+    private onLoginBtnClick = () => {
+        if (this.state.email == "admin" && this.state.password == "admin") {
+            alert('OK');
+        }
     }
 }
