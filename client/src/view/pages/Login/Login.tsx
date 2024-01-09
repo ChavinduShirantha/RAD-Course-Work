@@ -6,7 +6,7 @@ interface LoginProps {
 }
 
 interface LoginState {
-    email: string,
+    uname: string,
     password: string
 }
 
@@ -15,7 +15,7 @@ export class Login extends Component<LoginProps, LoginState> {
     constructor(props: any) {
         super(props);
         this.state = {
-            email: '',
+            uname: '',
             password: ''
         }
         this.handleMessageInputOnChange = this.handleMessageInputOnChange.bind(this);
@@ -32,13 +32,13 @@ export class Login extends Component<LoginProps, LoginState> {
                         <div className="mb-2">
                             <label
                                 className="block text-sm font-semibold text-gray-800">
-                                Email
+                                User Name
                             </label>
                             <input type="text"
                                    className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-[#2cc1fc]
                                     focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"
-                                   name="email"
-                                   value={this.state.email}
+                                   name="uname"
+                                   value={this.state.uname}
                                    onChange={this.handleMessageInputOnChange}/>
                         </div>
                         <div className="mb-2">
@@ -63,7 +63,12 @@ export class Login extends Component<LoginProps, LoginState> {
                                 className="w-full px-4 py-2 tracking-wide text-white transition-colors duration-200 transform
                                 bg-[#2cc1fc] rounded-md hover:bg-white hover:text-black hover:border-black border-[1px]"
                                 onClick={this.onLoginBtnClick}>
-                                Login
+                                {
+                                    this.state.uname === "admin" && this.state.password === "admin" ?
+                                        <Link to="../admin">Login</Link>
+                                         : <Link to="/">Login</Link>
+
+                                }
                             </button>
                         </div>
                     </form>
@@ -96,8 +101,12 @@ export class Login extends Component<LoginProps, LoginState> {
     }
 
     private onLoginBtnClick = () => {
-        if (this.state.email == "admin" && this.state.password == "admin") {
-            alert('OK');
+        if (this.state.uname === "" && this.state.password === "") {
+            alert('Please Fill the fields and try again');
+        } else if (this.state.uname === "admin" && this.state.password === "admin") {
+            alert('Login Success');
+        } else {
+            alert('UserName Or Password Incorrect');
         }
     }
 }
