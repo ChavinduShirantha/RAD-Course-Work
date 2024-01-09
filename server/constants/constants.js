@@ -44,6 +44,6 @@ const productsList = [
         "image": "product5.jpg",
         "productState": "out_of_stock.png"
     }
-]
+];
 
-module.exports = productsList;
+module.exports = {productsList};
