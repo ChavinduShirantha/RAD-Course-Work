@@ -1,6 +1,33 @@
 import {Component} from "react";
+import axios from "axios";
 
-export class Contact extends Component {
+interface ContactProps {
+    data: any;
+}
+
+interface ContactState {
+    name: string;
+    contact: string;
+    email: string;
+    message: string;
+}
+
+export class Contact extends Component<ContactProps, ContactState> {
+
+    private api: any;
+
+    constructor(props: any) {
+        super(props);
+        this.api = axios.create({baseURL: `http://localhost:4000`});
+        this.state = {
+            name: '',
+            contact: '',
+            email: '',
+            message: ''
+        }
+        this.handleMessageInputOnChange = this.handleMessageInputOnChange.bind(this);
+    }
+
     render() {
         return (
             <div className="flex bg-[url(images/main_bg.jpg)] bg-no-repeat">
@@ -21,28 +48,51 @@ export class Contact extends Component {
                             <div className="pb-2 basis-1/2">
                                 <label className="text-white text-[14px]">Your Name :</label>
                                 <input type="text"
-                                       className="block w-5/6 px-4 py-2 mt-2 bg-[#444544] text-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                                       className="block w-5/6 px-4 py-2 mt-2 bg-[#444544] text-white border
+                                       rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
+                                       focus:ring focus:ring-opacity-40"
+                                       name="name"
+                                       value={this.state.name}
+                                       onChange={this.handleMessageInputOnChange}/>
                             </div>
                             <div className="pb-2 basis-1/2">
                                 <label className="text-white text-[14px]">Your Phone No. :</label>
                                 <input type="tel"
-                                       className="block w-5/6 px-4 py-2 mt-2 bg-[#444544] text-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                                       className="block w-5/6 px-4 py-2 mt-2 bg-[#444544] text-white border
+                                       rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
+                                       focus:ring focus:ring-opacity-40"
+                                       name="contact"
+                                       value={this.state.contact}
+                                       onChange={this.handleMessageInputOnChange}/>
                             </div>
                         </div>
                         <div className="pb-2">
                             <label className="text-white text-[14px]">Your Email :</label>
                             <input type="email"
-                                   className="block w-11/12 px-4 py-2 mt-2 bg-[#444544] text-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                                   className="block w-11/12 px-4 py-2 mt-2 bg-[#444544] text-white border
+                                   rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
+                                   focus:ring focus:ring-opacity-40"
+                                   name="email"
+                                   value={this.state.email}
+                                   onChange={this.handleMessageInputOnChange}/>
                         </div>
                         <div className="pb-2">
                             <label className="text-white text-[14px]">Your Message :</label>
                             <textarea
-                                className="block h-40 w-11/12 px-4 py-2 mt-2 bg-[#444544] text-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40 resize-none"/>
+                                className="block h-40 w-11/12 px-4 py-2 mt-2 bg-[#444544] text-white border
+                                rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring
+                                focus:ring-opacity-40 resize-none"
+                                name="message"
+                                value={this.state.message}
+                                onChange={this.handleMessageInputOnChange}/>
                         </div>
 
                         <div className="mt-2 float-right">
                             <button type="button"
-                                    className="mt-5 mr-14 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px] font-bold text-white rounded hover:bg-[#444544] hover:border-[2px] hover:border-[#2cc1fc] hover:text-[#2cc1fc]">Sent
+                                    className="mt-5 mr-14 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px]
+                                    font-bold text-white rounded hover:bg-[#444544] hover:border-[2px]
+                                    hover:border-[#2cc1fc] hover:text-[#2cc1fc]"
+                                    onClick={this.onSendBtnClick}>Sent
                             </button>
                         </div>
                     </form>
@@ -93,5 +143,33 @@ export class Contact extends Component {
                 </div>
             </div>
         );
+    }
+
+    handleMessageInputOnChange(event: { target: {value: any; name: any;} }) {
+        const target = event.target;
+        const name = target.name;
+        const value = target.value;
+        // @ts-ignore
+        this.setState({
+            [name]: value
+        });
+    }
+
+    private onSendBtnClick = () => {
+        try {
+            this.api.post('/contact/submit', {
+                name: this.state.name,
+                contact: this.state.contact,
+                email: this.state.email,
+                message: this.state.message
+            }).then((res: { data: any}) => {
+                const jsonData = res.data;
+                alert(jsonData);
+            }).catch((error: any)=> {
+                console.error('Axios Error', error);
+            });
+        } catch (error) {
+            console.error('Error submitting data:', error);
+        }
     }
 }
