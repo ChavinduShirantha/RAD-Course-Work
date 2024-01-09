@@ -24,12 +24,16 @@ import mf15 from "../../../images/manufactor_logo_15.png";
 import mf16 from "../../../images/manufactor_logo_16.png";
 import mf17 from "../../../images/manufactor_logo_17.png";
 import mf18 from "../../../images/manufactor_logo_18.png";
+import axios from "axios";
 
 
 export class Home extends Component {
 
+    private api: any;
+
     constructor(props:{}|Readonly<{}>) {
         super(props);
+        this.api = axios.create({baseURL: `http://localhost:4000`});
         this.state={
             data:[],
         }
@@ -41,9 +45,14 @@ export class Home extends Component {
 
     fetchData=async ()=>{
         try {
-            const response = await fetch('./product-data.json');
-            const jsonData = await response.json();
-            this.setState({data: jsonData});
+            /*const response = await fetch('./product-data.json');
+            const jsonData = await response.json();*/
+            this.api.get('/products/all').then((res:{data:any})=>{
+                const jsonData = res.data;
+                this.setState({data: jsonData});
+            }).catch((error:any)=>{
+                console.error('Axios Error', error)
+            })
         }catch (error){
             console.log('Error Fetching Data ', error);
         }
