@@ -1,8 +1,9 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import logo from "../../../images/logo2.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
+import Clock from 'react-live-clock';
 
 export class AdminNavbar extends Component {
     render() {
@@ -16,7 +17,12 @@ export class AdminNavbar extends Component {
                         <h1 className="ml-2 mt-5 uppercase text-[18px] text-[#0af] font-bold">Techno computers</h1>
                     </div>
                 </Link>
-
+                <div className="flex text-[20px] font-bold text-[#e6f0e6] mt-3">
+                    <label>Time :</label>
+                    <Clock className="ml-2 mr-5" format={'HH:mm:ss'} ticking={true} timezone={'SriLanka'}/>
+                    <label>Date :</label>
+                    <Clock className="ml-2" format={'YYYY-MM-DD dddd'} ticking={true} timezone={'SriLanka'}/>
+                </div>
                 <div>
                     <button className="text-[14px] font-bold text-[#e6f0e6]
                                    bg-[#2cc1fc] pl-3 pr-3 h-10 mt-3
