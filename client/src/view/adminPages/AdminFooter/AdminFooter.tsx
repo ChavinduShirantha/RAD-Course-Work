@@ -9,8 +9,6 @@ export class AdminFooter extends Component {
     render() {
         return (
             <div className="justify-center bg-[#232323]">
-                <div
-                    className="ml-16 mr-16 flex items-center border-gray-500 justify-center w-11/12 mt-5 mb-5 border border-t"></div>
                 <div className="pl-16 pr-16 flex flex-row">
                     <div className="basis-1/4 pt-10">
                         <Link to="/">
