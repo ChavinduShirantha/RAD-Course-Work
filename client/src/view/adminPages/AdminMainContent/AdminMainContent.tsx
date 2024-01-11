@@ -1,6 +1,6 @@
 import {Component} from "react";
 import {Route, Routes} from "react-router-dom";
-import {AdminHome} from "../AdminHome/AdminHome";
+import {AdminDashboard} from "../AdminDashboard/AdminDashboard";
 import {AdminSideBar} from "../AdminSideBar/AdminSideBar";
 
 export class AdminMainContent extends Component {
@@ -12,7 +12,7 @@ export class AdminMainContent extends Component {
                 </div>
                 <div className="flex basis-5/6 ">
                     <Routes>
-                        <Route path="/" Component={AdminHome}></Route>
+                        <Route path="/" Component={AdminDashboard}></Route>
                     </Routes>
                 </div>
             </div>

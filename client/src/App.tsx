@@ -5,6 +5,9 @@ import {DefaultLayout} from "./view/common/DefaultLayout/DefaultLayout";
 import {Login} from "./view/pages/Login/Login";
 import {SignUp} from "./view/pages/SignUp/SignUp";
 import {AdminDefaultLayout} from "./view/adminPages/AdminDefaultLayout/AdminDefaultLayout";
+import {ManageCustomers} from "./view/adminPages/ManageCustomers/ManageCustomers";
+import {ManageProducts} from "./view/adminPages/ManageProducts/ManageProducts";
+import {Dashboard} from "./view/adminPages/Dashboard/Dashboard";
 
 function App() {
     return (
@@ -21,6 +24,15 @@ function App() {
                 </Route>
                 <Route path="/admin"
                        Component={AdminDefaultLayout}>
+                </Route>
+                <Route path="/admin/dashboard"
+                       Component={Dashboard}>
+                </Route>
+                <Route path="/admin/manageCustomers"
+                       Component={ManageCustomers}>
+                </Route>
+                <Route path="/admin/manageProducts"
+                       Component={ManageProducts}>
                 </Route>
             </Routes>
         </BrowserRouter>
