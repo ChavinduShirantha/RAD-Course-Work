@@ -40,16 +40,20 @@ export class Navbar extends Component {
                 </ul>
 
                 <div>
-                    <button className="text-[14px] font-bold text-[#e6f0e6]
+                    <Link to="/login">
+                        <button className="text-[14px] font-bold text-[#e6f0e6]
                                    bg-[#2cc1fc] pl-3 pr-3 h-10 mt-3
                                    hover:text-tertiary rounded mr-5 hover:scale-110">
-                        <Link to="/login"><FontAwesomeIcon icon={faSignInAlt}/> Sign In</Link>
-                    </button>
-                    <button className="text-[14px] font-bold text-[#e6f0e6]
+                            <FontAwesomeIcon icon={faSignInAlt}/> Sign In
+                        </button>
+                    </Link>
+                    <Link to="/signup">
+                        <button className="text-[14px] font-bold text-[#e6f0e6]
                                    bg-[#36C64C] pl-3 pr-3 h-10 mt-3
                                    hover:text-tertiary rounded hover:scale-110">
-                        <Link to="/signup"><FontAwesomeIcon icon={faUserPlus}/> Sign Up</Link>
-                    </button>
+                            <FontAwesomeIcon icon={faUserPlus}/> Sign Up
+                        </button>
+                    </Link>
                 </div>
             </div>
         );

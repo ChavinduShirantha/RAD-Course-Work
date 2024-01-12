@@ -27,11 +27,13 @@ export class AdminNavbar extends Component {
                     <label className="text-[24px] text-[#e6f0e6] pr-3"><FontAwesomeIcon
                         icon={faUser}/></label>
                     <label className="text-[18px] text-[#e6f0e6] pr-3">Admin</label>
-                    <button className="text-[14px] font-bold text-[#e6f0e6]
+                    <Link to="/">
+                        <button className="text-[14px] font-bold text-[#e6f0e6]
                                    bg-[#2cc1fc] pl-3 pr-3 h-10 mt-3
                                    hover:text-tertiary rounded mr-5 hover:scale-110">
-                        <Link to="/"><FontAwesomeIcon icon={faSignOutAlt}/> Log Out</Link>
-                    </button>
+                            <FontAwesomeIcon icon={faSignOutAlt}/> Log Out
+                        </button>
+                    </Link>
                 </div>
             </div>
         );
