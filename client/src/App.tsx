@@ -7,6 +7,7 @@ import {SignUp} from "./view/pages/SignUp/SignUp";
 import {ManageCustomers} from "./view/adminPages/ManageCustomers/ManageCustomers";
 import {ManageProducts} from "./view/adminPages/ManageProducts/ManageProducts";
 import {Dashboard} from "./view/adminPages/Dashboard/Dashboard";
+import {AdminDefaultLayout} from "./view/adminPages/AdminDefaultLayout/AdminDefaultLayout";
 
 function App() {
     return (
@@ -21,6 +22,9 @@ function App() {
                 <Route path="/signup"
                        Component={SignUp}>
                 </Route>
+                {/*<Route path="/admin/*"
+                       Component={AdminDefaultLayout}>
+                </Route>*/}
                 <Route path="/admin/dashboard"
                        Component={Dashboard}>
                 </Route>

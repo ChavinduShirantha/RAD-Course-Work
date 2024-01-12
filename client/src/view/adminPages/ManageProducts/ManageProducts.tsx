@@ -13,8 +13,10 @@ export class ManageProducts extends Component {
                         <AdminSideBar/>
                     </div>
                     <div className="flex basis-5/6 ">
-                        <div className="h-auto mx-auto">
-                            <h1>Admin Product Content</h1>
+                        <div className="flex">
+                            <div className="h-auto p-10">
+                                <h1>Admin Product Content</h1>
+                            </div>
                         </div>
                     </div>
                 </div>

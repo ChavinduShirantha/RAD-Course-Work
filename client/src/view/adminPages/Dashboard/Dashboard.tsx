@@ -1,6 +1,6 @@
 import {Component} from "react";
-import {AdminNavbar} from "../AdminNavbar/AdminNavbar";
 import {AdminSideBar} from "../AdminSideBar/AdminSideBar";
+import {AdminNavbar} from "../AdminNavbar/AdminNavbar";
 import {AdminFooter} from "../AdminFooter/AdminFooter";
 
 export class Dashboard extends Component {
@@ -13,8 +13,10 @@ export class Dashboard extends Component {
                         <AdminSideBar/>
                     </div>
                     <div className="flex basis-5/6 ">
-                        <div className="h-auto mx-auto">
-                            <h1>Admin Dashboard Content</h1>
+                        <div className="flex">
+                            <div className="h-auto p-10">
+                                <h1>Admin Dashboard Content</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
