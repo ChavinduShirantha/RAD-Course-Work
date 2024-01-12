@@ -94,7 +94,7 @@ export class ManageProducts extends Component {
                                         </button>
                                         <button
                                             className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase tracking-wide text-white transition-colors duration-200 transform bg-[#2cc1fc] rounded-md hover:bg-white hover:text-[#2cc1fc] hover:border-[#2cc1fc] border-[2px]">
-                                            Get All Product
+                                            Get All Products
                                         </button>
                                     </div>
                                 </form>
