@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import {Link} from "react-router-dom";
 import logo from "../../../images/logo2.png";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faSignOutAlt} from "@fortawesome/free-solid-svg-icons";
+import {faSignOutAlt, faUser} from "@fortawesome/free-solid-svg-icons";
 import Clock from 'react-live-clock';
 
 export class AdminNavbar extends Component {
@@ -24,6 +24,9 @@ export class AdminNavbar extends Component {
                     <Clock className="ml-2" format={'YYYY-MM-DD dddd'} ticking={true} timezone={'SriLanka'}/>
                 </div>
                 <div>
+                    <label className="text-[24px] text-[#e6f0e6] pr-3"><FontAwesomeIcon
+                        icon={faUser}/></label>
+                    <label className="text-[18px] text-[#e6f0e6] pr-3">Admin</label>
                     <button className="text-[14px] font-bold text-[#e6f0e6]
                                    bg-[#2cc1fc] pl-3 pr-3 h-10 mt-3
                                    hover:text-tertiary rounded mr-5 hover:scale-110">
