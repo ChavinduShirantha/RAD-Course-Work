@@ -134,18 +134,26 @@ export class ManageCustomers extends Component {
                                     </div>
                                 </form>
                             </div>
-                            <table className="w-10/12 border mt-10 mb-10 border-gray-500">
+                            <table className="w-10/12 border mt-16 mb-10 border-gray-500">
                                 <thead className="h-20 border border-gray-500">
                                 <tr className="text-black text-center">
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">First Name</th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Last Name</th>
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">First
+                                        Name
+                                    </th>
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Last
+                                        Name
+                                    </th>
                                     <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Contact</th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Date Of Birth</th>
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Date Of
+                                        Birth
+                                    </th>
                                     <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Address</th>
                                     <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">NIC</th>
                                     <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Country</th>
                                     <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Email</th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">User Name</th>
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">User
+                                        Name
+                                    </th>
                                     <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Password</th>
                                 </tr>
                                 </thead>

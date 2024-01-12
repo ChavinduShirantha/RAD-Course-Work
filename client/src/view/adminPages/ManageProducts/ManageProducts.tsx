@@ -13,7 +13,7 @@ export class ManageProducts extends Component {
                         <AdminSideBar/>
                     </div>
                     <div className="flex basis-5/6 ">
-                        <div className="flex flex-wrap justify-center  min-h-screen w-full mx-auto ">
+                        <div className="flex flex-wrap justify-center mt-20 min-h-screen w-full mx-auto ">
                             <div className="w-8/12 p-10 m-auto bg-white rounded-xl shadow-[#000] shadow-2xl">
                                 <h1 className="text-3xl font-semibold text-center text-[#2cc1fc] uppercase">
                                     Manage Products
@@ -71,7 +71,9 @@ export class ManageProducts extends Component {
                                                 className="block text-sm font-semibold text-gray-800">
                                                 Product State
                                             </label>
-                                            <select className="block w-full px-4 py-3 mt-2  bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40" id="role_Type" name="role_Type">
+                                            <select
+                                                className="block w-full px-4 py-3 mt-2  bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"
+                                                id="role_Type" name="role_Type">
                                                 <option value="AVAILABLE">AVAILABLE</option>
                                                 <option value="UNAVAILABLE">UNAVAILABLE</option>
                                                 <option value="NEW_ARRIVAL">NEW_ARRIVAL</option>
@@ -99,6 +101,34 @@ export class ManageProducts extends Component {
                                     </div>
                                 </form>
                             </div>
+                            <table className="w-10/12 border mt-16 mb-10 border-gray-500">
+                                <thead className="h-20 border border-gray-500">
+                                <tr className="text-black text-center">
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Product
+                                        ID
+                                    </th>
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Description</th>
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Name</th>
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Unit
+                                        Price
+                                    </th>
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Image</th>
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Product
+                                        State
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr className="text-white text-center px-1 h-20 border border-gray-500">
+                                    <td className="px-1 border border-gray-500"></td>
+                                    <td className="p-5 border border-gray-500"></td>
+                                    <td className="px-1 border border-gray-500"></td>
+                                    <td className="px-1 border border-gray-500"></td>
+                                    <td className="px-1 border border-gray-500"></td>
+                                    <td className="px-1 border border-gray-500"></td>
+                                </tr>
+                                </tbody>
+                            </table>
                         </div>
                     </div>
                 </div>

@@ -60,7 +60,8 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                     </table>
                     <div>
                         <h1 className="float-left text-[20px] mt-10 font-bold px-1 uppercase text-white">Total : <span
-                            className="text-[20px] mt-10 font-bold px-1 uppercase text-white">{total+".00 LKR"}</span></h1>
+                            className="text-[20px] mt-10 font-bold px-1 uppercase text-white">{total + ".00 LKR"}</span>
+                        </h1>
                         <button className="float-right mt-10 mb-10 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px]
                     font-bold text-white rounded uppercase border-[2px] border-[#2cc1fc]
                     hover:bg-[#444544] hover:text-[#2cc1fc] hover:border-[2px]
