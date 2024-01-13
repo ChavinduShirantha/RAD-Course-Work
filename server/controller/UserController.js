@@ -1,8 +1,17 @@
+const User = require("../model/User");
+
 const UserController = {
-    saveUserDetails: function (req, res, next) {
-        const requestedData = req.body;
-        console.log(requestedData);
-        res.send("User Added Successfully!");
+    saveUserDetails: async function (req, res, next) {
+        try {
+            const requestedData = req.body;
+
+            const product = await User.create(requestedData);
+
+            res.status(200).json("User Added Successfully!");
+        } catch (error) {
+            console.error(error);
+            res.status(500).json({error: 'Something went wrong'})
+        }
     }
 }
 

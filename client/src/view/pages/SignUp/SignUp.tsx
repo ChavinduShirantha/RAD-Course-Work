@@ -155,7 +155,7 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                                     Email
                                 </label>
                                 <input
-                                    type="email"
+                                    type="text"
                                     className="block w-full px-4 py-2 mt-2  bg-white border rounded-md
                                     focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
                                     focus:ring focus:ring-opacity-40"
