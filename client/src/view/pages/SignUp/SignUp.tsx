@@ -48,7 +48,19 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                         Create Account
                     </h1>
                     <form className="mt-6">
-                        <div className="flex flex-row gap-10">
+                        <div className="flex flex-row gap-10 ">
+                            <div className="mb-2 basis-1/2 ">
+                                <label
+                                    className="block text-sm font-semibold text-gray-800">
+                                    User ID
+                                </label>
+                                <input type="text"
+                                       className="block w-full px-4 py-2 mt-2 bg-white border rounded-md
+                                       focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
+                                       focus:ring focus:ring-opacity-40"
+                                       name="userID"
+                                />
+                            </div>
                             <div className="mb-2 basis-1/2 ">
                                 <label
                                     className="block text-sm font-semibold text-gray-800">
@@ -62,6 +74,9 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                                        value={this.state.firstName}
                                        onChange={this.handleMessageInputOnChange}/>
                             </div>
+                        </div>
+                        <div className="flex flex-row gap-10">
+
                             <div className="mb-2 basis-1/2">
                                 <label
                                     className="block text-sm font-semibold text-gray-800">
@@ -76,8 +91,6 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                                     value={this.state.lastName}
                                     onChange={this.handleMessageInputOnChange}/>
                             </div>
-                        </div>
-                        <div className="flex flex-row gap-10">
                             <div className="mb-2 basis-1/2">
                                 <label
                                     className="block text-sm font-semibold text-gray-800">
@@ -91,6 +104,9 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                                        value={this.state.contact}
                                        onChange={this.handleMessageInputOnChange}/>
                             </div>
+                        </div>
+                        <div className="flex flex-row gap-10">
+
                             <div className="mb-2 basis-1/2">
                                 <label
                                     className="block text-sm font-semibold text-gray-800">
@@ -104,21 +120,6 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                                     name="dateOfBirth"
                                     value={this.state.dateOfBirth}
                                     onChange={this.handleMessageInputOnChange}/>
-                            </div>
-                        </div>
-                        <div className="flex flex-row gap-10">
-                            <div className="mb-2 basis-1/2">
-                                <label
-                                    className="block text-sm font-semibold text-gray-800">
-                                    Address
-                                </label>
-                                <input type="text"
-                                       className="block w-full px-4 py-2 mt-2 bg-white border rounded-md
-                                       focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
-                                       focus:ring focus:ring-opacity-40"
-                                       name="address"
-                                       value={this.state.address}
-                                       onChange={this.handleMessageInputOnChange}/>
                             </div>
                             <div className="mb-2 basis-1/2">
                                 <label
@@ -139,6 +140,19 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                             <div className="mb-2 basis-1/2">
                                 <label
                                     className="block text-sm font-semibold text-gray-800">
+                                    Address
+                                </label>
+                                <input type="text"
+                                       className="block w-full px-4 py-2 mt-2 bg-white border rounded-md
+                                       focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
+                                       focus:ring focus:ring-opacity-40"
+                                       name="address"
+                                       value={this.state.address}
+                                       onChange={this.handleMessageInputOnChange}/>
+                            </div>
+                            <div className="mb-2 basis-1/2">
+                                <label
+                                    className="block text-sm font-semibold text-gray-800">
                                     Country
                                 </label>
                                 <input type="text"
@@ -149,6 +163,9 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                                        value={this.state.country}
                                        onChange={this.handleMessageInputOnChange}/>
                             </div>
+                        </div>
+                        <div className="flex flex-row gap-10">
+
                             <div className="mb-2 basis-1/2">
                                 <label
                                     className="block text-sm font-semibold text-gray-800">
@@ -163,8 +180,6 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                                     value={this.state.email}
                                     onChange={this.handleMessageInputOnChange}/>
                             </div>
-                        </div>
-                        <div className="flex flex-row gap-10">
                             <div className="mb-2 basis-1/2">
                                 <label
                                     className="block text-sm font-semibold text-gray-800">
@@ -178,6 +193,9 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                                        value={this.state.userName}
                                        onChange={this.handleMessageInputOnChange}/>
                             </div>
+                        </div>
+                        <div className="flex justify-center ">
+
                             <div className="mb-2 basis-1/2">
                                 <label
                                     className="block text-sm font-semibold text-gray-800">
