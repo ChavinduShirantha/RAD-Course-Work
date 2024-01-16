@@ -1,12 +1,13 @@
 import {Component} from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 interface SignUpProps {
     data: any;
 }
 
 interface SignUpState {
-    userID:string;
+    userID: string;
     firstName: string;
     lastName: string;
     contact: string;
@@ -27,7 +28,7 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
         super(props);
         this.api = axios.create({baseURL: `http://localhost:4000`});
         this.state = {
-            userID:'',
+            userID: '',
             firstName: '',
             lastName: '',
             contact: '',
@@ -215,12 +216,14 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                             </div>
                         </div>
                         <div className="mt-6 flex justify-center">
-                            <button
-                                className="w-52 font-bold px-4 py-2 uppercase tracking-wide text-white
+                            <Link to="/">
+                                <button
+                                    className="w-52 font-bold px-4 py-2 uppercase tracking-wide text-white
                                 transition-colors duration-200 transform bg-[#2cc1fc] rounded-md
                                 hover:bg-white hover:text-black hover:border-black border-[1px]"
-                                onClick={this.onCreateAccountBtnClick}>Create Account
-                            </button>
+                                    onClick={this.onCreateAccountBtnClick}>Create Account
+                                </button>
+                            </Link>
                         </div>
                     </form>
                 </div>
@@ -241,7 +244,7 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
     private onCreateAccountBtnClick = () => {
         try {
             this.api.post('/users/save', {
-                userID:this.state.userID,
+                userID: this.state.userID,
                 firstName: this.state.firstName,
                 lastName: this.state.lastName,
                 contact: this.state.contact,
