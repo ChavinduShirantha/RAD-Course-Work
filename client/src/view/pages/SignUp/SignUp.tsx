@@ -6,6 +6,7 @@ interface SignUpProps {
 }
 
 interface SignUpState {
+    userID:string;
     firstName: string;
     lastName: string;
     contact: string;
@@ -26,6 +27,7 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
         super(props);
         this.api = axios.create({baseURL: `http://localhost:4000`});
         this.state = {
+            userID:'',
             firstName: '',
             lastName: '',
             contact: '',
@@ -59,7 +61,8 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
                                        focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
                                        focus:ring focus:ring-opacity-40"
                                        name="userID"
-                                />
+                                       value={this.state.userID}
+                                       onChange={this.handleMessageInputOnChange}/>
                             </div>
                             <div className="mb-2 basis-1/2 ">
                                 <label
@@ -238,6 +241,7 @@ export class SignUp extends Component<SignUpProps, SignUpState> {
     private onCreateAccountBtnClick = () => {
         try {
             this.api.post('/users/save', {
+                userID:this.state.userID,
                 firstName: this.state.firstName,
                 lastName: this.state.lastName,
                 contact: this.state.contact,

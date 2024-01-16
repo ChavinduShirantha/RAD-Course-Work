@@ -2,6 +2,12 @@ const mongoose = require('mongoose');
 
 const UserModel = mongoose.Schema(
     {
+        "userID":{
+            require: true,
+            type: String,
+            unique: true,
+            index: true
+        },
         "firstName": {
             require: true,
             type: String
@@ -37,8 +43,6 @@ const UserModel = mongoose.Schema(
         "userName": {
             require: true,
             type: String,
-            unique: true,
-            index: true
         },
         "password": {
             require: true,
