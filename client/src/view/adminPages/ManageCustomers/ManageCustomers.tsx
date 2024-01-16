@@ -3,7 +3,8 @@ import {AdminNavbar} from "../AdminNavbar/AdminNavbar";
 import {AdminSideBar} from "../AdminSideBar/AdminSideBar";
 import {AdminFooter} from "../AdminFooter/AdminFooter";
 import axios from "axios";
-
+import {UsersTable} from "../UsersTable/UsersTable";
+import {Link} from "react-router-dom";
 
 interface ManageCustomersProps {
     data: any;
@@ -21,9 +22,10 @@ interface ManageCustomersState {
     email: any;
     userName: string;
     password: string;
+    data: [];
 }
 
-export class ManageCustomers extends Component<ManageCustomersProps,ManageCustomersState> {
+export class ManageCustomers extends Component<ManageCustomersProps, ManageCustomersState> {
 
     private api: any;
 
@@ -41,12 +43,34 @@ export class ManageCustomers extends Component<ManageCustomersProps,ManageCustom
             country: '',
             email: '',
             userName: '',
-            password: ''
+            password: '',
+            data: [],
         }
         this.handleMessageInputOnChange = this.handleMessageInputOnChange.bind(this);
     }
 
+    componentDidMount() {
+        this.fetchData().then(r => console.log("Data Fetch Completed!" + r));
+    }
+
+    fetchData = async () => {
+        try {
+            this.api.get('/users/all').then((res: { data: any }) => {
+                const jsonData = res.data;
+                this.setState({
+                    data: jsonData
+                });
+            }).catch((error: any) => {
+                console.error('Axios Error', error)
+            })
+        } catch (error) {
+            console.log('Error Fetching Data ', error);
+        }
+    }
+
     render() {
+        // @ts-ignore
+        const {data} = this.state;
         return (
             <>
                 <AdminNavbar/>
@@ -254,8 +278,8 @@ export class ManageCustomers extends Component<ManageCustomersProps,ManageCustom
                                             className="w-52 font-bold m-1 text-[14px] px-4 py-2 uppercase
                                             tracking-wide text-white transition-colors duration-200 transform
                                             bg-[#2cc1fc] rounded-md hover:bg-white hover:text-[#2cc1fc]
-                                            hover:border-[#2cc1fc] border-[2px]">
-                                            Get All Customers
+                                            hover:border-[#2cc1fc] border-[2px]" onClick={this.onGetAllBtnClick}>
+                                            <Link to="/admin/manageCustomers"> Get All Customers</Link>
                                         </button>
                                     </div>
                                 </form>
@@ -263,6 +287,9 @@ export class ManageCustomers extends Component<ManageCustomersProps,ManageCustom
                             <table className="w-10/12 border mt-16 mb-10 border-gray-500">
                                 <thead className="h-20 border border-gray-500">
                                 <tr className="text-black text-center">
+                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">User
+                                        ID
+                                    </th>
                                     <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">First
                                         Name
                                     </th>
@@ -283,11 +310,9 @@ export class ManageCustomers extends Component<ManageCustomersProps,ManageCustom
                                     <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Password</th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                <tr className="text-white text-center px-1 h-20 border border-gray-500">
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="p-5 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
+                                <tbody id="tblUsers">
+
+                                {/*<tr className="text-black text-center px-1 h-20 border border-gray-500">
                                     <td className="px-1 border border-gray-500"></td>
                                     <td className="px-1 border border-gray-500"></td>
                                     <td className="px-1 border border-gray-500"></td>
@@ -295,7 +320,16 @@ export class ManageCustomers extends Component<ManageCustomersProps,ManageCustom
                                     <td className="px-1 border border-gray-500"></td>
                                     <td className="px-1 border border-gray-500"></td>
                                     <td className="px-1 border border-gray-500"></td>
-                                </tr>
+                                    <td className="px-1 border border-gray-500"></td>
+                                    <td className="px-1 border border-gray-500"></td>
+                                    <td className="px-1 border border-gray-500"></td>
+                                    <td className="px-1 border border-gray-500"></td>
+                                </tr>*/}
+                                {
+                                    data.map((user: any) => (
+                                        <UsersTable key={user.userID} data={user}/>
+                                    ))
+                                }
                                 </tbody>
                             </table>
                         </div>
@@ -339,6 +373,10 @@ export class ManageCustomers extends Component<ManageCustomersProps,ManageCustom
         } catch (error) {
             console.error('Error submitting data:', error);
         }
+    }
+
+    private onGetAllBtnClick = () => {
+
     }
 
 }

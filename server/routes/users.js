@@ -1,8 +1,10 @@
 const express = require('express');
-const ContactController = require('../controller/UserController');
+const UserController = require('../controller/UserController');
 const router = express.Router();
 
 
-router.post('/save', ContactController.saveUserDetails);
+router.post('/save', UserController.saveUserDetails);
+
+router.get('/all', UserController.getAllUsers);
 
 module.exports =router;
