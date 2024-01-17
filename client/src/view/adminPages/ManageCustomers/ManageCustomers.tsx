@@ -271,7 +271,7 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
                                             className="w-52 font-bold m-1 text-[14px] px-4 py-2 uppercase
                                             tracking-wide text-white transition-colors duration-200 transform
                                             bg-red-600 rounded-md hover:bg-white hover:text-red-600
-                                            hover:border-red-600 border-[2px]">
+                                            hover:border-red-600 border-[2px]" onClick={this.onDeleteBtnClick}>
                                             Delete Customer
                                         </button>
                                         <button
@@ -377,6 +377,21 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
 
     private onGetAllBtnClick = () => {
 
+    }
+
+
+    private onDeleteBtnClick = () => {
+        try {
+            this.api.delete(`/users/delete/${this.state.userID}`)
+                .then((res: { data: any }) => {
+                const jsonData = res.data;
+                alert(jsonData);
+            }).catch((error: any) => {
+                console.error('Axios Error', error);
+            });
+        } catch (error) {
+            console.error('Error submitting data:', error);
+        }
     }
 
 }
