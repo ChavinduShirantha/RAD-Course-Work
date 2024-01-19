@@ -99,13 +99,13 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
                                                    value={this.state.userID}
                                                    onChange={this.handleMessageInputOnChange}/>
                                         </div>
-                                        <button
+                                        {/*<button
                                             className="w-1/6 font-bold mt-6 ml-2 text-[14px] h-12  uppercase
                                             tracking-wide text-white transition-colors duration-200 transform
                                             bg-[#2cc1fc] rounded-md hover:bg-white hover:text-[#2cc1fc]
                                             hover:border-[#2cc1fc] border-[2px]">
                                             Search
-                                        </button>
+                                        </button>*/}
                                     </div>
                                     <div className="flex flex-row gap-10">
                                         <div className="mb-2 basis-1/2 ">
@@ -264,15 +264,14 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
                                             className="w-52 font-bold m-1 text-[14px] px-4 py-2 uppercase
                                             tracking-wide text-white transition-colors duration-200 transform
                                             bg-yellow-400 rounded-md hover:bg-white hover:text-yellow-400
-                                            hover:border-yellow-400 border-[2px]">
+                                            hover:border-yellow-400 border-[2px]" onClick={this.onSearchBtnClick}>
                                             Update Customer
                                         </button>
                                         <button
                                             className="w-52 font-bold m-1 text-[14px] px-4 py-2 uppercase
                                             tracking-wide text-white transition-colors duration-200 transform
                                             bg-red-600 rounded-md hover:bg-white hover:text-red-600
-                                            hover:border-red-600 border-[2px]" onClick={this.onDeleteBtnClick}
-                                            >
+                                            hover:border-red-600 border-[2px]" onClick={this.onDeleteBtnClick}>
                                             Delete Customer
                                         </button>
                                         <button
@@ -386,6 +385,21 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
             this.api.delete(`/users/delete/${this.state.userID}`)
                 .then((res: { data: any }) => {
                     const jsonData = res.data;
+                    alert(jsonData);
+                }).catch((error: any) => {
+                console.error('Axios Error', error);
+            });
+        } catch (error) {
+            console.error('Error submitting data:', error);
+        }
+    }
+
+    private onSearchBtnClick = () => {
+        try {
+            this.api.get(`/users/find/${this.state.userID}`)
+                .then((res: { data: any }) => {
+                    const jsonData = res.data;
+
                     alert(jsonData);
                 }).catch((error: any) => {
                 console.error('Axios Error', error);

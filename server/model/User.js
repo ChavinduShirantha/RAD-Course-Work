@@ -4,7 +4,7 @@ const UserModel = mongoose.Schema(
     {
         "userID":{
             require: true,
-            type: String,
+            type: Number,
             unique: true,
             index: true
         },
