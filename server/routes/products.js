@@ -1,10 +1,9 @@
 var express = require('express');
 var router = express.Router();
 
-const {productsList} = require('../constants/constants');
+const ProductController = require("../controller/ProductController");
 
-router.get('/all', function(req, res, next) {
-    res.send(productsList);
-});
+router.post('/save', ProductController.saveProductDetails);
+
 
 module.exports = router;

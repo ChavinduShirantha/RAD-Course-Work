@@ -2,8 +2,44 @@ import {Component} from "react";
 import {AdminNavbar} from "../AdminNavbar/AdminNavbar";
 import {AdminSideBar} from "../AdminSideBar/AdminSideBar";
 import {AdminFooter} from "../AdminFooter/AdminFooter";
+import axios from "axios";
 
-export class ManageProducts extends Component {
+
+interface ManageProductsProps {
+    data: any;
+}
+
+interface ManageProductsState {
+    id: string;
+    description: string;
+    name: string;
+    price: string;
+    currency: string;
+    image: string;
+    productState: string;
+}
+
+
+
+export class ManageProducts extends Component<ManageProductsProps,ManageProductsState> {
+
+    private api: any;
+
+    constructor(props: any) {
+        super(props);
+        this.api = axios.create({baseURL: `http://localhost:4000`});
+        this.state = {
+            id: '',
+            description: '',
+            name: '',
+            price: '',
+            currency: '',
+            image: '',
+            productState: '',
+        }
+        this.handleMessageInputOnChange = this.handleMessageInputOnChange.bind(this);
+    }
+
     render() {
         return (
             <>
@@ -26,7 +62,12 @@ export class ManageProducts extends Component {
                                                 Product ID
                                             </label>
                                             <input type="text"
-                                                   className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                                                   className="block w-full px-4 py-2 mt-2 bg-white border
+                                                   rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
+                                                   focus:outline-none focus:ring focus:ring-opacity-40"
+                                                   name="id"
+                                                   value={this.state.id}
+                                                   onChange={this.handleMessageInputOnChange}/>
                                         </div>
                                         <div className="mb-2 basis-1/2">
                                             <label
@@ -35,7 +76,12 @@ export class ManageProducts extends Component {
                                             </label>
                                             <input
                                                 type="text"
-                                                className="block w-full px-4 py-2 mt-2  bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                                                className="block w-full px-4 py-2 mt-2  bg-white border
+                                                rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
+                                                focus:outline-none focus:ring focus:ring-opacity-40"
+                                                name="description"
+                                                value={this.state.description}
+                                                onChange={this.handleMessageInputOnChange}/>
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-10">
@@ -44,8 +90,13 @@ export class ManageProducts extends Component {
                                                 className="block text-sm font-semibold text-gray-800">
                                                 Name
                                             </label>
-                                            <input type="tel"
-                                                   className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                                            <input type="text"
+                                                   className="block w-full px-4 py-2 mt-2 bg-white border
+                                                   rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
+                                                   focus:outline-none focus:ring focus:ring-opacity-40"
+                                                   name="name"
+                                                   value={this.state.name}
+                                                   onChange={this.handleMessageInputOnChange}/>
                                         </div>
                                         <div className="mb-2 basis-1/2">
                                             <label
@@ -54,7 +105,43 @@ export class ManageProducts extends Component {
                                             </label>
                                             <input
                                                 type="text"
-                                                className="block w-full px-4 py-2 mt-2  bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
+                                                className="block w-full px-4 py-2 mt-2  bg-white border
+                                                rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
+                                                focus:outline-none focus:ring focus:ring-opacity-40"
+                                                name="price"
+                                                value={this.state.price}
+                                                onChange={this.handleMessageInputOnChange}/>
+                                        </div>
+                                    </div>
+                                    <div className="flex flex-row gap-10">
+                                        <div className="mb-2 basis-1/2">
+                                            <label
+                                                className="block text-sm font-semibold text-gray-800">
+                                                Currency
+                                            </label>
+                                            <input type="text"
+                                                   className="block w-full px-4 py-2 mt-2 bg-white border
+                                                   rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
+                                                   focus:outline-none focus:ring focus:ring-opacity-40"
+                                                   name="currency"
+                                                   value={this.state.currency}
+                                                   onChange={this.handleMessageInputOnChange}/>
+                                        </div>
+                                        <div className="mb-2 basis-1/2">
+                                            <label
+                                                className="block text-sm font-semibold text-gray-800">
+                                                Product State
+                                            </label>
+                                            <select
+                                                className="block w-full px-4 py-3 mt-2  bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"
+                                                id="state_Type" name="state_Type"
+                                                value={this.state.productState}
+                                                onChange={this.handleMessageInputOnChange}>
+                                                <option value="AVAILABLE">AVAILABLE</option>
+                                                <option value="UNAVAILABLE">UNAVAILABLE</option>
+                                                <option value="NEW_ARRIVAL">NEW_ARRIVAL</option>
+                                                <option value="COMING_SOON">COMING_SOON</option>
+                                            </select>
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-10">
@@ -64,26 +151,20 @@ export class ManageProducts extends Component {
                                                 Image
                                             </label>
                                             <input type="file"
-                                                   className="block w-full px-4 py-2 mt-2 bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"/>
-                                        </div>
-                                        <div className="mb-2 basis-1/2">
-                                            <label
-                                                className="block text-sm font-semibold text-gray-800">
-                                                Product State
-                                            </label>
-                                            <select
-                                                className="block w-full px-4 py-3 mt-2  bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"
-                                                id="role_Type" name="role_Type">
-                                                <option value="AVAILABLE">AVAILABLE</option>
-                                                <option value="UNAVAILABLE">UNAVAILABLE</option>
-                                                <option value="NEW_ARRIVAL">NEW_ARRIVAL</option>
-                                                <option value="COMING_SOON">COMING_SOON</option>
-                                            </select>
+                                                   className="block w-full px-4 py-2 mt-2 bg-white border
+                                                   rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
+                                                   focus:outline-none focus:ring focus:ring-opacity-40"
+                                                   name="image"
+                                                   value={this.state.image}
+                                                   onChange={this.handleMessageInputOnChange}/>
                                         </div>
                                     </div>
                                     <div className="mt-6 flex justify-center">
                                         <button
-                                            className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase tracking-wide text-white transition-colors duration-200 transform bg-green-700 rounded-md hover:bg-white hover:text-green-700 hover:border-green-700 border-[2px]">
+                                            className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase
+                                            tracking-wide text-white transition-colors duration-200
+                                            transform bg-green-700 rounded-md hover:bg-white hover:text-green-700
+                                            hover:border-green-700 border-[2px]" onClick={this.onSaveBtnClick}>
                                             Save Product
                                         </button>
                                         <button
@@ -135,5 +216,36 @@ export class ManageProducts extends Component {
                 <AdminFooter/>
             </>
         );
+    }
+
+    handleMessageInputOnChange(event: { target: { value: any; name: any; } }) {
+        const target = event.target;
+        const name = target.name;
+        const value = target.value;
+        // @ts-ignore
+        this.setState({
+            [name]: value
+        });
+    }
+
+    private onSaveBtnClick = () => {
+        try {
+            this.api.post('/products/save', {
+                id: this.state.id,
+                description: this.state.description,
+                name: this.state.name,
+                price: this.state.price,
+                currency: this.state.currency,
+                image: this.state.image,
+                productState: this.state.productState
+            }).then((res: { data: any }) => {
+                const jsonData = res.data;
+                alert(jsonData);
+            }).catch((error: any) => {
+                console.error('Axios Error', error);
+            });
+        } catch (error) {
+            console.error('Error submitting data:', error);
+        }
     }
 }
