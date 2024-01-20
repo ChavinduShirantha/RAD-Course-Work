@@ -40,9 +40,10 @@ const UserController = {
     searchUser: async function (req, res, next) {
         try {
             const userID = req.params.userID;
-            const product = await User.findOne({id: userID});
+            const product = await User.find({id: userID});
 
             res.status(200).json(product);
+
         } catch (error) {
             console.error(error);
             res.status(500).json({error: 'Something went wrong'})

@@ -1,10 +1,10 @@
-import {Component} from "react";
+import {Component, useState} from "react";
 import {AdminNavbar} from "../AdminNavbar/AdminNavbar";
 import {AdminSideBar} from "../AdminSideBar/AdminSideBar";
 import {AdminFooter} from "../AdminFooter/AdminFooter";
 import axios from "axios";
-import {UsersTable} from "../UsersTable/UsersTable";
 import {Link} from "react-router-dom";
+import CustomerTable from "../CustomerTable/CustomerTable";
 
 interface ManageCustomersProps {
     data: any;
@@ -25,7 +25,7 @@ interface ManageCustomersState {
     data: [];
 }
 
-export class ManageCustomers extends Component<ManageCustomersProps, ManageCustomersState> {
+export class ManageCustomers extends Component<ManageCustomersProps,ManageCustomersState> {
 
     private api: any;
 
@@ -55,7 +55,7 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
 
     fetchData = async () => {
         try {
-            this.api.get('/users/all').then((res: { data: any }) => {
+            this.api.get(`/users/all`).then((res: { data: any }) => {
                 const jsonData = res.data;
                 this.setState({
                     data: jsonData
@@ -99,13 +99,13 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
                                                    value={this.state.userID}
                                                    onChange={this.handleMessageInputOnChange}/>
                                         </div>
-                                        {/*<button
+                                        <button
                                             className="w-1/6 font-bold mt-6 ml-2 text-[14px] h-12  uppercase
                                             tracking-wide text-white transition-colors duration-200 transform
                                             bg-[#2cc1fc] rounded-md hover:bg-white hover:text-[#2cc1fc]
-                                            hover:border-[#2cc1fc] border-[2px]">
+                                            hover:border-[#2cc1fc] border-[2px]" onClick={this.onSearchBtnClick}>
                                             Search
-                                        </button>*/}
+                                        </button>
                                     </div>
                                     <div className="flex flex-row gap-10">
                                         <div className="mb-2 basis-1/2 ">
@@ -264,7 +264,7 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
                                             className="w-52 font-bold m-1 text-[14px] px-4 py-2 uppercase
                                             tracking-wide text-white transition-colors duration-200 transform
                                             bg-yellow-400 rounded-md hover:bg-white hover:text-yellow-400
-                                            hover:border-yellow-400 border-[2px]" onClick={this.onSearchBtnClick}>
+                                            hover:border-yellow-400 border-[2px]" onClick={this.onGetAllBtnClick}>
                                             Update Customer
                                         </button>
                                         <button
@@ -284,54 +284,7 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
                                     </div>
                                 </form>
                             </div>
-                            <table className="w-10/12 border mt-16 mb-10 border-gray-500">
-                                <thead className="h-20 border border-gray-500">
-                                <tr className="text-black text-center">
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">User
-                                        ID
-                                    </th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">First
-                                        Name
-                                    </th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Last
-                                        Name
-                                    </th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Contact</th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Date Of
-                                        Birth
-                                    </th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Address</th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">NIC</th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Country</th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Email</th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">User
-                                        Name
-                                    </th>
-                                    <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Password</th>
-                                </tr>
-                                </thead>
-                                <tbody id="tblUsers">
-
-                                {/*<tr className="text-black text-center px-1 h-20 border border-gray-500">
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                    <td className="px-1 border border-gray-500"></td>
-                                </tr>*/}
-                                {
-                                    data.map((user: any) => (
-                                        <UsersTable key={user.userID} data={user}/>
-                                    ))
-                                }
-                                </tbody>
-                            </table>
+                            <CustomerTable data={data} />
                         </div>
                     </div>
                 </div>
@@ -376,7 +329,7 @@ export class ManageCustomers extends Component<ManageCustomersProps, ManageCusto
     }
 
     private onGetAllBtnClick = () => {
-
+        this.fetchData().then(r => console.log("Data Fetch Completed!" + r));
     }
 
 
