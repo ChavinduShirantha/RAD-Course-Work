@@ -132,7 +132,14 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                 className="block text-sm font-semibold text-gray-800">
                                                 Product State
                                             </label>
-                                            <select
+                                            <input type="text"
+                                                   className="block w-full px-4 py-2 mt-2 bg-white border
+                                                   rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
+                                                   focus:outline-none focus:ring focus:ring-opacity-40"
+                                                   name="productState"
+                                                   value={this.state.productState}
+                                                   onChange={this.handleMessageInputOnChange}/>
+                                            {/*<select
                                                 className="block w-full px-4 py-3 mt-2  bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"
                                                 id="state_Type" name="state_Type"
                                                 value={this.state.productState}
@@ -141,7 +148,7 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                 <option value="UNAVAILABLE">UNAVAILABLE</option>
                                                 <option value="NEW_ARRIVAL">NEW_ARRIVAL</option>
                                                 <option value="COMING_SOON">COMING_SOON</option>
-                                            </select>
+                                            </select>*/}
                                         </div>
                                     </div>
                                     <div className="flex flex-row gap-10">
@@ -150,7 +157,7 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                 className="block text-sm font-semibold text-gray-800">
                                                 Image
                                             </label>
-                                            <input type="file"
+                                            <input type="text"
                                                    className="block w-full px-4 py-2 mt-2 bg-white border
                                                    rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
                                                    focus:outline-none focus:ring focus:ring-opacity-40"
