@@ -4,7 +4,7 @@ import {AdminSideBar} from "../AdminSideBar/AdminSideBar";
 import {AdminFooter} from "../AdminFooter/AdminFooter";
 import axios from "axios";
 import {Link} from "react-router-dom";
-import CustomerTable from "../CustomerTable/CustomerTable";
+import CustomerTable from "../Tables/CustomerTable";
 
 interface ManageCustomersProps {
     data: any;

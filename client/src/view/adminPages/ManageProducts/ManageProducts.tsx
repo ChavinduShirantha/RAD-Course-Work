@@ -3,6 +3,7 @@ import {AdminNavbar} from "../AdminNavbar/AdminNavbar";
 import {AdminSideBar} from "../AdminSideBar/AdminSideBar";
 import {AdminFooter} from "../AdminFooter/AdminFooter";
 import axios from "axios";
+import ProductTable from "../Tables/ProductTable";
 
 
 interface ManageProductsProps {
@@ -17,6 +18,7 @@ interface ManageProductsState {
     currency: string;
     image: string;
     productState: string;
+    data: [];
 }
 
 
@@ -36,11 +38,33 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
             currency: '',
             image: '',
             productState: '',
+            data: [],
         }
         this.handleMessageInputOnChange = this.handleMessageInputOnChange.bind(this);
     }
 
+    componentDidMount() {
+        this.fetchData().then(r => console.log("Data Fetch Completed!" + r));
+    }
+
+    fetchData = async () => {
+        try {
+            this.api.get(`/products/all`).then((res: { data: any }) => {
+                const jsonData = res.data;
+                this.setState({
+                    data: jsonData
+                });
+            }).catch((error: any) => {
+                console.error('Axios Error', error)
+            })
+        } catch (error) {
+            console.log('Error Fetching Data ', error);
+        }
+    }
+
     render() {
+        // @ts-ignore
+        const {data} = this.state;
         return (
             <>
                 <AdminNavbar/>
@@ -189,7 +213,7 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                     </div>
                                 </form>
                             </div>
-                            <table className="w-10/12 border mt-16 mb-10 border-gray-500">
+                            {/*<table className="w-10/12 border mt-16 mb-10 border-gray-500">
                                 <thead className="h-20 border border-gray-500">
                                 <tr className="text-black text-center">
                                     <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Product
@@ -216,7 +240,8 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                     <td className="px-1 border border-gray-500"></td>
                                 </tr>
                                 </tbody>
-                            </table>
+                            </table>*/}
+                            <ProductTable data={data}/>
                         </div>
                     </div>
                 </div>
