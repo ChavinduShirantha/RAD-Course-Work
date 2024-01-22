@@ -13,6 +13,7 @@ router.delete('/delete/:id',ProductController.deleteProductDetail);
 
 router.get('/find/:id',ProductController.searchProduct);
 
+router.put('/update/:id',ProductController.updateProduct);
 /*router.get('/all', function(req, res, next) {
     res.send(productsList);
 });*/

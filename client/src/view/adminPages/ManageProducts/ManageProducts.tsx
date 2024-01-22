@@ -211,7 +211,7 @@ export class ManageProducts extends Component<ManageProductsProps, ManageProduct
                                             className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase
                                             tracking-wide text-white transition-colors duration-200
                                             transform bg-yellow-400 rounded-md hover:bg-white hover:text-yellow-400
-                                            hover:border-yellow-400 border-[2px]" onClick={this.onGetAllBtnClick}>
+                                            hover:border-yellow-400 border-[2px]" onClick={this.onUpdateBtnClick}>
                                             Update Product
                                         </button>
                                         <button
@@ -327,6 +327,27 @@ export class ManageProducts extends Component<ManageProductsProps, ManageProduct
                         data: jsonData
                     });
                 }).catch((error: any) => {
+                console.error('Axios Error', error);
+            });
+        } catch (error) {
+            console.error('Error submitting data:', error);
+        }
+    }
+
+    private onUpdateBtnClick = () => {
+        try {
+            this.api.put(`/products/update/${this.state.id}`, {
+                id: this.state.id,
+                description: this.state.description,
+                name: this.state.name,
+                price: this.state.price,
+                currency: this.state.currency,
+                image: this.state.image + '.jpg',
+                productState: this.state.productState + '.png'
+            }).then((res: { data: any }) => {
+                const jsonData = res.data;
+                alert(jsonData);
+            }).catch((error: any) => {
                 console.error('Axios Error', error);
             });
         } catch (error) {
