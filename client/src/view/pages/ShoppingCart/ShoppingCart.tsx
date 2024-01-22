@@ -23,7 +23,7 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                             </th>
                             <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Unit Price</th>
                             <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Qty</th>
-                            <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Action</th>
+                            {/*<th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Action</th>*/}
                             <th className="text-[14px] font-bold px-1 uppercase border border-gray-500">Total Price</th>
                         </tr>
                         </thead>
@@ -47,9 +47,9 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                                         <td className="px-1 border border-gray-500">{item.product.description}</td>
                                         <td className="px-1 border border-gray-500">{item.product.price + item.product.currency}</td>
                                         <td className="px-1 border border-gray-500">{item.itemCount}</td>
-                                        <td className="px-1 hover:cursor-pointer hover:text-red-600 border border-gray-500">
+                                        {/*<td className="px-1 hover:cursor-pointer hover:text-red-600 border border-gray-500">
                                             <FontAwesomeIcon
-                                                icon={faX}/></td>
+                                                icon={faX}/></td>*/}
                                         <td className="px-1 border
                                         border-gray-500">{(item.product.price * item.itemCount) + item.product.currency}</td>
                                         <td className="px-1 border border-gray-500 hidden">{total += item.product.price}</td>
