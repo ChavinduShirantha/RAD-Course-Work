@@ -9,6 +9,9 @@ router.post('/save', ProductController.saveProductDetails);
 
 router.get('/all', ProductController.getAllProducts);
 
+router.delete('/delete/:id',ProductController.deleteProductDetail);
+
+
 /*router.get('/all', function(req, res, next) {
     res.send(productsList);
 });*/

@@ -199,15 +199,24 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                             Save Product
                                         </button>
                                         <button
-                                            className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase tracking-wide text-white transition-colors duration-200 transform bg-yellow-400 rounded-md hover:bg-white hover:text-yellow-400 hover:border-yellow-400 border-[2px]">
+                                            className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase
+                                            tracking-wide text-white transition-colors duration-200
+                                            transform bg-yellow-400 rounded-md hover:bg-white hover:text-yellow-400
+                                            hover:border-yellow-400 border-[2px]" onClick={this.onGetAllBtnClick}>
                                             Update Product
                                         </button>
                                         <button
-                                            className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase tracking-wide text-white transition-colors duration-200 transform bg-red-600 rounded-md hover:bg-white hover:text-red-600 hover:border-red-600 border-[2px]">
+                                            className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase
+                                            tracking-wide text-white transition-colors duration-200
+                                            transform bg-red-600 rounded-md hover:bg-white hover:text-red-600
+                                            hover:border-red-600 border-[2px]" onClick={this.onDeleteBtnClick}>
                                             Delete Product
                                         </button>
                                         <button
-                                            className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase tracking-wide text-white transition-colors duration-200 transform bg-[#2cc1fc] rounded-md hover:bg-white hover:text-[#2cc1fc] hover:border-[#2cc1fc] border-[2px]">
+                                            className="w-52 font-bold m-2 text-[14px] px-4 py-2 uppercase
+                                            tracking-wide text-white transition-colors duration-200
+                                            transform bg-[#2cc1fc] rounded-md hover:bg-white hover:text-[#2cc1fc]
+                                            hover:border-[#2cc1fc] border-[2px]" onClick={this.onGetAllBtnClick}>
                                             Get All Products
                                         </button>
                                     </div>
@@ -274,6 +283,24 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                 const jsonData = res.data;
                 alert(jsonData);
             }).catch((error: any) => {
+                console.error('Axios Error', error);
+            });
+        } catch (error) {
+            console.error('Error submitting data:', error);
+        }
+    }
+
+    private onGetAllBtnClick = () => {
+        this.fetchData().then(r => console.log("Data Fetch Completed!" + r));
+    }
+
+    private onDeleteBtnClick = (e: any) => {
+        try {
+            this.api.delete(`/products/delete/${this.state.id}`)
+                .then((res: { data: any }) => {
+                    const jsonData = res.data;
+                    alert(jsonData);
+                }).catch((error: any) => {
                 console.error('Axios Error', error);
             });
         } catch (error) {
