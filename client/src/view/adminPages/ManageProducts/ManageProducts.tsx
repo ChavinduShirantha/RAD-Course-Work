@@ -1,4 +1,4 @@
-import {Component} from "react";
+import React, {Component} from "react";
 import {AdminNavbar} from "../AdminNavbar/AdminNavbar";
 import {AdminSideBar} from "../AdminSideBar/AdminSideBar";
 import {AdminFooter} from "../AdminFooter/AdminFooter";
@@ -22,8 +22,7 @@ interface ManageProductsState {
 }
 
 
-
-export class ManageProducts extends Component<ManageProductsProps,ManageProductsState> {
+export class ManageProducts extends Component<ManageProductsProps, ManageProductsState> {
 
     private api: any;
 
@@ -79,7 +78,7 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                     Manage Products
                                 </h1>
                                 <form className="mt-6">
-                                    <div className="flex flex-row gap-10">
+                                    <div className="flex justify-center gap-10">
                                         <div className="mb-2 basis-1/2 ">
                                             <label
                                                 className="block text-sm font-semibold text-gray-800">
@@ -93,6 +92,16 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                    value={this.state.id}
                                                    onChange={this.handleMessageInputOnChange}/>
                                         </div>
+                                        <button
+                                            className="w-1/6 font-bold mt-6 ml-2 text-[14px] h-12  uppercase
+                                            tracking-wide text-white transition-colors duration-200 transform
+                                            bg-[#2cc1fc] rounded-md hover:bg-white hover:text-[#2cc1fc]
+                                            hover:border-[#2cc1fc] border-[2px]" onClick={this.onSearchBtnClick}>
+                                            Search
+                                        </button>
+
+                                    </div>
+                                    <div className="flex flex-row gap-10">
                                         <div className="mb-2 basis-1/2">
                                             <label
                                                 className="block text-sm font-semibold text-gray-800">
@@ -107,8 +116,6 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                 value={this.state.description}
                                                 onChange={this.handleMessageInputOnChange}/>
                                         </div>
-                                    </div>
-                                    <div className="flex flex-row gap-10">
                                         <div className="mb-2 basis-1/2">
                                             <label
                                                 className="block text-sm font-semibold text-gray-800">
@@ -122,6 +129,9 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                    value={this.state.name}
                                                    onChange={this.handleMessageInputOnChange}/>
                                         </div>
+
+                                    </div>
+                                    <div className="flex flex-row gap-10">
                                         <div className="mb-2 basis-1/2">
                                             <label
                                                 className="block text-sm font-semibold text-gray-800">
@@ -136,8 +146,6 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                 value={this.state.price}
                                                 onChange={this.handleMessageInputOnChange}/>
                                         </div>
-                                    </div>
-                                    <div className="flex flex-row gap-10">
                                         <div className="mb-2 basis-1/2">
                                             <label
                                                 className="block text-sm font-semibold text-gray-800">
@@ -151,19 +159,8 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                    value={this.state.currency}
                                                    onChange={this.handleMessageInputOnChange}/>
                                         </div>
-                                        <div className="mb-2 basis-1/2">
-                                            <label
-                                                className="block text-sm font-semibold text-gray-800">
-                                                Product State
-                                            </label>
-                                            <input type="text"
-                                                   className="block w-full px-4 py-2 mt-2 bg-white border
-                                                   rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
-                                                   focus:outline-none focus:ring focus:ring-opacity-40"
-                                                   name="productState"
-                                                   value={this.state.productState}
-                                                   onChange={this.handleMessageInputOnChange}/>
-                                            {/*<select
+
+                                        {/*<select
                                                 className="block w-full px-4 py-3 mt-2  bg-white border rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none focus:ring focus:ring-opacity-40"
                                                 id="state_Type" name="state_Type"
                                                 value={this.state.productState}
@@ -173,7 +170,6 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                 <option value="NEW_ARRIVAL">NEW_ARRIVAL</option>
                                                 <option value="COMING_SOON">COMING_SOON</option>
                                             </select>*/}
-                                        </div>
                                     </div>
                                     <div className="flex flex-row gap-10">
                                         <div className="mb-2 basis-1/2">
@@ -187,6 +183,19 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                                                    focus:outline-none focus:ring focus:ring-opacity-40"
                                                    name="image"
                                                    value={this.state.image}
+                                                   onChange={this.handleMessageInputOnChange}/>
+                                        </div>
+                                        <div className="mb-2 basis-1/2">
+                                            <label
+                                                className="block text-sm font-semibold text-gray-800">
+                                                Product State
+                                            </label>
+                                            <input type="text"
+                                                   className="block w-full px-4 py-2 mt-2 bg-white border
+                                                   rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc]
+                                                   focus:outline-none focus:ring focus:ring-opacity-40"
+                                                   name="productState"
+                                                   value={this.state.productState}
                                                    onChange={this.handleMessageInputOnChange}/>
                                         </div>
                                     </div>
@@ -256,7 +265,8 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                 </div>
                 <AdminFooter/>
             </>
-        );
+        )
+            ;
     }
 
     handleMessageInputOnChange(event: { target: { value: any; name: any; } }) {
@@ -277,8 +287,8 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                 name: this.state.name,
                 price: this.state.price,
                 currency: this.state.currency,
-                image: this.state.image,
-                productState: this.state.productState
+                image: this.state.image + '.jpg',
+                productState: this.state.productState + '.png'
             }).then((res: { data: any }) => {
                 const jsonData = res.data;
                 alert(jsonData);
@@ -300,6 +310,22 @@ export class ManageProducts extends Component<ManageProductsProps,ManageProducts
                 .then((res: { data: any }) => {
                     const jsonData = res.data;
                     alert(jsonData);
+                }).catch((error: any) => {
+                console.error('Axios Error', error);
+            });
+        } catch (error) {
+            console.error('Error submitting data:', error);
+        }
+    }
+
+    private onSearchBtnClick = () => {
+        try {
+            this.api.get(`/products/find/${this.state.id}`)
+                .then((res: { data: any }) => {
+                    const jsonData = res.data;
+                    this.setState({
+                        data: jsonData
+                    });
                 }).catch((error: any) => {
                 console.error('Axios Error', error);
             });
