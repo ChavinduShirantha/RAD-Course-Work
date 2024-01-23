@@ -1,6 +1,6 @@
 import {Component} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faBorderAll, faUsers, faComputer} from "@fortawesome/free-solid-svg-icons";
+import {faBorderAll, faUsers, faComputer,faCartShopping} from "@fortawesome/free-solid-svg-icons";
 import {Link} from "react-router-dom";
 
 export class AdminSideBar extends Component {
@@ -22,6 +22,9 @@ export class AdminSideBar extends Component {
                                 font-bold hover:scale-105"><FontAwesomeIcon icon={faComputer}/> Products
                     </button>
                 </Link>
+                <button className="w-full bg-[#2cc1fc] mb-5 h-16 rounded-2xl text-white
+                                font-bold hover:scale-105"><FontAwesomeIcon icon={faCartShopping}/> Order Details
+                </button>
             </div>
         );
     }

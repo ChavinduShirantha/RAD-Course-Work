@@ -1,3 +1,15 @@
+::-webkit-scrollbar {
+    background-color: rgba(49, 45, 45, 0.91);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.85);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: rgb(44, 165, 252);
+}
+
 @keyframes scroll {
     0% {
         transform: translateX(0);
