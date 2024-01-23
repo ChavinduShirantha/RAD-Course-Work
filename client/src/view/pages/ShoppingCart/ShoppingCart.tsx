@@ -14,6 +14,16 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
         return (
             <div className="flex justify-center items-start pt-10 pb-10 bg-[url(images/main_bg.jpg)] h-auto">
                 <div className="bg-[#232323] w-full mx-16 justify-center pr-10 pl-10">
+                    <div className="pb-2 pt-10 flex">
+                        <label className="text-[20px] pt-3 text-white font-bold px-2 pr-5 uppercase">Order ID :</label>
+                        <input type="text"
+                               className="block w-1/6 px-4 py-2 mt-2 bg-[#444544] text-white border
+                                       rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
+                                       focus:ring focus:ring-opacity-40" placeholder="ORD-0001"
+                               name="oid"
+                        />
+                    </div>
+
                     <table className="w-full border mt-10 border-gray-500">
                         <thead className="h-20 border border-gray-500">
                         <tr className="text-white text-center">
