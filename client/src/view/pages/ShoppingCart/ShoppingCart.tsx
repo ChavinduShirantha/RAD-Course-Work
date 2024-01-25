@@ -111,7 +111,7 @@ export class ShoppingCart extends Component<ShoppingCartProps,ShoppingCartState>
     }
 
     private onPurchaseBtnClick = () => {
-        try {
+        /*try {
             this.api.post('/purchase/save', {
                 oid: this.state.oid
             }).then((res: { data: any}) => {
@@ -122,7 +122,8 @@ export class ShoppingCart extends Component<ShoppingCartProps,ShoppingCartState>
             });
         } catch (error) {
             console.error('Error submitting data:', error);
-        }
+        }*/
+        alert('First Create an Login with Your Account to before Purchase Item');
     }
 
 }
