@@ -2,12 +2,29 @@ import {Component} from "react";
 import {CartItem} from "../../../model/CartItem";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faX} from '@fortawesome/free-solid-svg-icons'
+import axios from "axios";
 
 interface ShoppingCartProps {
     itemList: CartItem[];
 }
 
-export class ShoppingCart extends Component<ShoppingCartProps> {
+interface ShoppingCartState {
+    oid: string;
+}
+
+export class ShoppingCart extends Component<ShoppingCartProps,ShoppingCartState> {
+
+    private api: any;
+
+    constructor(props: any) {
+        super(props);
+        this.api = axios.create({baseURL: `http://localhost:4000`});
+        this.state = {
+            oid: ''
+        }
+        this.handleMessageInputOnChange = this.handleMessageInputOnChange.bind(this);
+    }
+
     render() {
         let total = 0;
 
@@ -20,7 +37,7 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                                className="block w-1/6 px-4 py-2 mt-2 bg-[#444544] text-white border
                                        rounded-md focus:border-[#2cc1fc] focus:ring-[#2cc1fc] focus:outline-none
                                        focus:ring focus:ring-opacity-40" placeholder="ORD-0001"
-                               name="oid"
+                               name="oid" value={this.state.oid} onChange={this.handleMessageInputOnChange}
                         />
                     </div>
 
@@ -75,11 +92,37 @@ export class ShoppingCart extends Component<ShoppingCartProps> {
                         <button className="float-right mt-10 mb-10 pl-6 pr-6 pt-2 pb-2 bg-[#2cc1fc] text-[16px]
                     font-bold text-white rounded uppercase border-[2px] border-[#2cc1fc]
                     hover:bg-[#444544] hover:text-[#2cc1fc] hover:border-[2px]
-                    hover:border-[#2cc1fc] hover:scale-110 ">Purchase
+                    hover:border-[#2cc1fc] hover:scale-110 " onClick={this.onPurchaseBtnClick}>Purchase
                         </button>
                     </div>
                 </div>
             </div>
         );
     }
+
+    handleMessageInputOnChange(event: { target: {value: any; name: any;} }) {
+        const target = event.target;
+        const name = target.name;
+        const value = target.value;
+        // @ts-ignore
+        this.setState({
+            [name]: value
+        });
+    }
+
+    private onPurchaseBtnClick = () => {
+        try {
+            this.api.post('/purchase/save', {
+                oid: this.state.oid
+            }).then((res: { data: any}) => {
+                const jsonData = res.data;
+                alert(jsonData);
+            }).catch((error: any)=> {
+                console.error('Axios Error', error);
+            });
+        } catch (error) {
+            console.error('Error submitting data:', error);
+        }
+    }
+
 }
