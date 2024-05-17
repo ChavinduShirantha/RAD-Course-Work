@@ -13,27 +13,46 @@
 * NodeJS
 * MongoDB
 
-<br>
-<p align="center" style="font-size: 24px;font-weight: bold">Screenshots</p>
+[//]: # (<br>)
 
-<br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view1.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view2.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view3.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view4.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view5.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view6.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view7.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view8.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view9.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view10.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view11.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view12.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view13.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view14.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view15.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view16.png" width="" height="" /></p><br>
-<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view17.png" width="" height="" /></p><br>
+[//]: # (<p align="center" style="font-size: 24px;font-weight: bold">Screenshots</p>)
+
+[//]: # ()
+[//]: # (<br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view1.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view2.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view3.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view4.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view5.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view6.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view7.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view8.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view9.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view10.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view11.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view12.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view13.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view14.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view15.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view16.png" width="" height="" /></p><br>)
+
+[//]: # (<p align="center"><img align="center" alt="" src="client/src/images/screenshots/view17.png" width="" height="" /></p><br>)
 
 
 <div align="center">
