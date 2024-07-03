@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/RAD-Course-Work/static/css/main.62dd68ac.css",
+    "main.js": "/RAD-Course-Work/static/js/main.bf9fa4fd.js",
+    "static/js/787.498e3191.chunk.js": "/RAD-Course-Work/static/js/787.498e3191.chunk.js",
+    "static/media/home_banner2.jpg": "/RAD-Course-Work/static/media/home_banner2.092641d53691e22dce94.jpg",
+    "static/media/logo2.png": "/RAD-Course-Work/static/media/logo2.7ffd368a85e6f7b8ff3d.png",
+    "static/media/home_banner6.jpg": "/RAD-Course-Work/static/media/home_banner6.f4a6d8509889f803c508.jpg",
+    "static/media/home_banner4.jpg": "/RAD-Course-Work/static/media/home_banner4.d7876290f84a7d6576d5.jpg",
+    "static/media/home_banner5.jpg": "/RAD-Course-Work/static/media/home_banner5.21fa52d79a3e2f62291d.jpg",
+    "static/media/home_banner1.jpg": "/RAD-Course-Work/static/media/home_banner1.9c9baecf80a27c5986e3.jpg",
+    "static/media/home_banner3.jpg": "/RAD-Course-Work/static/media/home_banner3.181674a0cef62c806d11.jpg",
+    "static/media/product8.jpg": "/RAD-Course-Work/static/media/product8.b892c2bef25d46ce620f.jpg",
+    "static/media/product5.jpg": "/RAD-Course-Work/static/media/product5.c57dd55bddb047ed2bb6.jpg",
+    "static/media/product3.jpg": "/RAD-Course-Work/static/media/product3.154b664c633b282c1f8c.jpg",
+    "static/media/product6.jpg": "/RAD-Course-Work/static/media/product6.cd3c5d64c160600d2a04.jpg",
+    "static/media/product1.jpg": "/RAD-Course-Work/static/media/product1.359b206e81824de62a48.jpg",
+    "static/media/out_of_stock.png": "/RAD-Course-Work/static/media/out_of_stock.fd5d61eb97ff0fef44ce.png",
+    "static/media/new_arrivals.png": "/RAD-Course-Work/static/media/new_arrivals.76680567e91e95c8bdcb.png",
+    "static/media/coming_soon.png": "/RAD-Course-Work/static/media/coming_soon.8ea93ced4dd6ea7ddae7.png",
+    "static/media/in_stock.png": "/RAD-Course-Work/static/media/in_stock.21aa77d0a8ad0a2c5303.png",
+    "static/media/product2.jpg": "/RAD-Course-Work/static/media/product2.c42c7b82419422cd78be.jpg",
+    "static/media/product4.jpg": "/RAD-Course-Work/static/media/product4.af2dc3330c8300954a96.jpg",
+    "static/media/product9.jpg": "/RAD-Course-Work/static/media/product9.0b80f0f5831be56ccdde.jpg",
+    "static/media/product7.jpg": "/RAD-Course-Work/static/media/product7.f77920abdb6931223245.jpg",
+    "static/media/product10.jpg": "/RAD-Course-Work/static/media/product10.ff1a7f6e4e8ee3bb21da.jpg",
+    "static/media/product11.jpg": "/RAD-Course-Work/static/media/product11.f18bcc71b6fc05871f89.jpg",
+    "static/media/about_banner.jpg": "/RAD-Course-Work/static/media/about_banner.c77c24234088a9acaac0.jpg",
+    "static/media/main_bg.jpg": "/RAD-Course-Work/static/media/main_bg.134fb7629087669de6cc.jpg",
+    "index.html": "/RAD-Course-Work/index.html",
+    "main.62dd68ac.css.map": "/RAD-Course-Work/static/css/main.62dd68ac.css.map",
+    "main.bf9fa4fd.js.map": "/RAD-Course-Work/static/js/main.bf9fa4fd.js.map",
+    "787.498e3191.chunk.js.map": "/RAD-Course-Work/static/js/787.498e3191.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.62dd68ac.css",
+    "static/js/main.bf9fa4fd.js"
+  ]
+}
